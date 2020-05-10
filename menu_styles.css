@@ -14,3 +14,14 @@ body {
 #inventoryDisclaimer {
 	font-size: 16px;
 }
+
+#menuPage {
+	width: viewport;
+}
+.no-padding {
+    padding: 0px;
+}
+.no-marginLR {
+    margin-left:0;
+    margin-right:0;
+}
