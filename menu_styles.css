@@ -13,6 +13,11 @@ body {
 
 #inventoryDisclaimer {
 	font-size: 16px;
+	color: white;
+	text-shadow: 1px 1px 1px black;
+}
+#navButton {
+	text-shadow: 1px 1px 1px black;
 }
 
 #menuPage {
