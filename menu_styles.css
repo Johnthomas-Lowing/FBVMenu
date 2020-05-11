@@ -27,7 +27,7 @@ body {
     margin-right:0;
 }
 
-.center-block {
+#center-block {
 	display: inline-block;
 	margin-right: auto;
 	margin-left: auto;
