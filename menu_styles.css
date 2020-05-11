@@ -1,5 +1,4 @@
 body {
-	background-repeat: no-repeat;
 	background-position: center;
 	background-color: #e74c3c;
 }
@@ -20,13 +19,16 @@ body {
 	text-shadow: 1px 1px 1px black;
 }
 
-#menuPage {
-	width: viewport;
-}
 .no-padding {
     padding: 0px;
 }
 .no-marginLR {
     margin-left:0;
     margin-right:0;
+}
+
+.center-block {
+	display: inline-block;
+	margin-right: auto;
+	margin-left: auto;
 }
