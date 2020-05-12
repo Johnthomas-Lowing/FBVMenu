@@ -12,16 +12,16 @@ body {
 #sub_header{
 	font-size: 40px;
 	color: white;
-	text-shadow: 2px 2px 1px black;
+	text-shadow: 1px 1px 1px black;
 	font-weight: bold;
 }
 
-#inventoryDisclaimer {
+.inventoryDisclaimer {
 	font-size: 16px;
 	color: white;
 	text-shadow: 1px 1px 1px black;
 }
-#navButton {
+.navButton {
 	text-shadow: 1px 1px 1px black;
 }
 
