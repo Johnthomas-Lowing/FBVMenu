@@ -33,11 +33,6 @@ body {
     margin-right:0;
 }
 
-#center-block {
-	display: inline-block;
-	margin-right: auto;
-	margin-left: auto;
-}
 #back_to_index {
 	position: absolute;
 	top: 0;
