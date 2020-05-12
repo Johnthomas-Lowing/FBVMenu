@@ -9,6 +9,12 @@ body {
 	text-shadow: 2px 2px 1px black;
 	font-weight: bold;
 }
+#sub_header{
+	font-size: 40px;
+	color: white;
+	text-shadow: 2px 2px 1px black;
+	font-weight: bold;
+}
 
 #inventoryDisclaimer {
 	font-size: 16px;
@@ -31,4 +37,9 @@ body {
 	display: inline-block;
 	margin-right: auto;
 	margin-left: auto;
+}
+#back_to_index {
+	position: absolute;
+	top: 0;
+	left: 0;
 }
