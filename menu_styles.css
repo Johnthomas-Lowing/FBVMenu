@@ -25,16 +25,15 @@ body {
 	text-shadow: 1px 1px 1px black;
 }
 
-.no-padding {
-    padding: 0px;
-}
-.no-marginLR {
-    margin-left:0;
-    margin-right:0;
+.padding {
+    padding: 1.5em;
 }
 
 #back_to_index {
 	position: absolute;
 	top: 0;
 	left: 0;
+}
+img {
+	margin: 0 auto;
 }
