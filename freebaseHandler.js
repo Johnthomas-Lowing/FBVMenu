@@ -1,5 +1,4 @@
 let freebaseLibrary = [
-  'air_factory.jpg',
   'alternativ.jpg',
   'aqua.jpg',
   'barista_brew.jpg',
@@ -19,14 +18,16 @@ let freebaseLibrary = [
   'pacific_northwest_two.jpg',
   'reds_apple.jpg',
   'ripe_collection.jpg',
-  'river_reserve_one.jpg',
   'river_reserve_two.jpg',
+  'river_reserve_one.jpg',
   'ruthless_one.jpg',
   'ruthless_two.jpg',
   'shijin.jpg',
   'silverback.jpg',
-  'transistor.jpg'
+  'transistor.jpg',
+  'air_factory.jpg',
 ];
+freebaseLibrary.sort();
 
 freebaseLibrary.forEach(imageSrc => {
   $('freebaseContainer').innerHTML += `<div class = "col"><div class = "row"><img src = resources/freebase_images/${imageSrc} class = padding></div>`;
