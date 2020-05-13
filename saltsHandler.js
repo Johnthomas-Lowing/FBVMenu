@@ -1,5 +1,5 @@
 let nicSaltLibrary = [
-  'air_factory_salts.jpg',
+  'salt_factory.jpg',
   'glas_basix_salts.jpg',
   'juice_head_salts.jpg',
   'met4_salts.jpg',
