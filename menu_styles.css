@@ -37,6 +37,9 @@ img {
   text-shadow: 1px 1px 1px black;
   transition-duration: .2s;
 }
+.phone-number{
+	text-decoration: none;
+}
 .navButton:hover {
 	background-color: white;
 	color: black;
