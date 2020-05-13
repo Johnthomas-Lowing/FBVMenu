@@ -1,4 +1,5 @@
 body {
+	font-family: 'Roboto', sans-serif;
 	background-color: #e74c3c;
 }
 img {
@@ -11,20 +12,40 @@ img {
 	font-weight: bold;
 }
 #sub_header{
-	font-size: 40px;
+	font-size: 36px;
 	color: white;
-	text-shadow: 1px 1px 1px black;
+	text-shadow: 2px 2px 1px black;
 	font-weight: bold;
 }
+.grid-container{
+	display: grid;
+}
 .inventoryDisclaimer {
-	font-size: 16px;
 	color: white;
 	text-shadow: 1px 1px 1px black;
 }
 .navButton {
-	text-shadow: 1px 1px 1px black;
+  background-color: #e74c3c;
+  border: 2px solid white;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  display: inline-block;
+  font-size: 16px;
+  text-shadow: 1px 1px 1px black;
+  transition-duration: .2s;
 }
-
+.navButton:hover {
+	background-color: white;
+	color: black;
+	text-shadow: none;
+}
+.navButton:active {
+	background-color: white;
+	color: black;
+}
 .padding {
     padding-right: 1.5em;
     padding-left:1.25em;
