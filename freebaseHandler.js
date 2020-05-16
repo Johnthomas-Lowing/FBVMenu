@@ -26,6 +26,7 @@ let freebaseLibrary = [
   'silverback.jpg',
   'transistor.jpg',
   'air_factory.jpg',
+  'vapetasia.jpg'
 ];
 freebaseLibrary.sort();
 
