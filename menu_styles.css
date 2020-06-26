@@ -5,6 +5,9 @@ body {
 img {
 	margin: 0 auto;
 }
+input:focus::placeholder {
+  color: transparent;
+}
 #header {
 	font-size: 48px;
 	color: white;
@@ -19,9 +22,7 @@ img {
 }
 .grid-container{
 	display: grid;
-}
-.grid-center{
-	grid-column: 2 / 4;
+	grid-template-columns: repeat(1,1fr);
 }
 .inventoryDisclaimer {
 	color: white;
