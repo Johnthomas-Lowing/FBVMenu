@@ -29,6 +29,7 @@ let freebaseLibrary = [
   {menuCard: 'air_factory.jpg', profile: ["fruity"], flavors: ["mystery", "blue razz", "raspberry", "berry rush", "wild apple", "melon lush", "kookie krunch"]},
   {menuCard: 'vapetasia.jpg', profile: ["cream"], flavors: ["killer kustard", "strawberry"]},
 ];
+let fourOhFour = [{menuCard: '404.jpg'}]
 drawLibrary(freebaseLibrary);
 const searchBar = $("freebaseSearch");
 searchBar.addEventListener("keyup", e => {
@@ -42,7 +43,11 @@ searchBar.addEventListener("keyup", e => {
       flavorCard.profile.filter(profile => profile.includes(searchString)).length > 0
     );
   });
-  drawLibrary(found);
+  if(found.length > 0){
+      drawLibrary(found);
+  } else {
+    drawLibrary(fourOhFour);
+  }
 });
 
 function drawLibrary(q){

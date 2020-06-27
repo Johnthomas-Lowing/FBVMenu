@@ -7,9 +7,6 @@ select:focus,
 input[type="text"] {
 	font-size: inherit;
   }
-img {
-	margin: 0 auto;
-}
 input:focus::placeholder {
   color: transparent;
 }
