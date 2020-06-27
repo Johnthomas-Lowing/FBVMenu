@@ -39,7 +39,7 @@ input:focus::placeholder {
   text-decoration: none;
   border-radius: 8px;
   display: inline-block;
-  font-size: 16px;
+  font-size: 18px;
   text-shadow: 1px 1px 1px black;
   transition-duration: .2s;
 }
