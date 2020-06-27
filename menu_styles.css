@@ -40,6 +40,7 @@ input:focus::placeholder {
   font-size: 16px;
   text-shadow: 1px 1px 1px black;
   transition-duration: .2s;
+  min-width:90% !important;
 }
 .phone-number{
 	text-decoration: none;
@@ -64,11 +65,4 @@ input:focus::placeholder {
 	top: 0;
 	left: 0;
 }
-/* Fix Input Zoom on iPhone 6 Plus, iPhone 6s Plus, iPhone 7 Plus, iPhone 8, iPhone X, XS, XS Max  */
-@media screen and (device-aspect-ratio: 9/16) {
-    select, textarea, input[type="text"], input[type="password"],
-    input[type="datetime"], input[type="datetime-local"],
-    input[type="date"], input[type="month"], input[type="time"],
-    input[type="week"], input[type="number"], input[type="email"],
-    input[type="url"]{ font-size: 16px; }
-};
+img{max-width:100% !important;}
