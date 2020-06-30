@@ -38,8 +38,13 @@ function drawLibrary(q){
 function sortLibrary(lib){
   lib.sort(function(a, b){
     var letterA = a.menuCard.toLowerCase(), letterB = b.menuCard.toLowerCase()
-    if (letterA > letterB) //ascending order
-        return 1
+    if (letterA > letterB){ //alphabetically higher
+      return 1;
+    } else if (letterA < letterB){ //alphabetically lower
+      return -1;
+    } else {
+      return 0;
+    }
   });
 }
 
