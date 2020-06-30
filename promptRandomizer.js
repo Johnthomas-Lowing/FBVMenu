@@ -1,10 +1,10 @@
 function $(que){
   return document.getElementById(que);
 }
-//holds random placeholders
+
 let placeholderLibrary = ["What does               taste like?",
 	"Something that tastes like...",
-	"What flavors does                   make?",
+	"What flavors do                   make?",
 	"Try searching by strength like '12mg'",
 	"Try searching for 'menthol' flavors",
 	"Search for individual flavors like 'apple'"]
