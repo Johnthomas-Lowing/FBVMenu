@@ -22,7 +22,7 @@ searchBar.addEventListener("keyup", e => { //updates page contents every time a 
       drawLibrary(found);
   } else {
     drawLibrary(fourOhFour);
-  }
+  };
 });
 
 function $(que){
@@ -40,7 +40,7 @@ function sortLibrary(lib){
     var letterA = a.menuCard.toLowerCase(), letterB = b.menuCard.toLowerCase()
     if (letterA > letterB) //ascending order
         return 1
-  })
+  });
 }
 
 function checkPage(){
@@ -54,6 +54,6 @@ function checkPage(){
     searchBar = $("saltSearch");
     container = $("saltContainer");
     librarySrc = "salt_images";
-  }
+  };
 }
 
