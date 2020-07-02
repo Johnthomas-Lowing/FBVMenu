@@ -3,3 +3,6 @@
 .vs/FBVMenu/v16/.suo
 .vs/ProjectSettings.json
 .vs/slnx.sqlite
+
+# Local Netlify folder
+.netlify
