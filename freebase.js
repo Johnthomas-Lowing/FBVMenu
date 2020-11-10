@@ -5,7 +5,7 @@ function cleanUp(){
 	container.innerHTML =`<div class="container" id="freebase"></div>`;
 }
 
-print(library);
+display(library);
 let brands = document.getElementById("brands");
 let flavors = document.getElementById('flavors')
 
@@ -17,11 +17,11 @@ search.addEventListener("keyup", e => {
 	let results = library.filter(f => {
 		return(f.brand.includes(string));
 	});
-	print(results);
+	display(results);
 });
 
 
-function print(lib){
+function display(lib){
 	len = lib.length;
 	for(a = 0; a < len; a++){
 		container.innerHTML+=`<div class="item">

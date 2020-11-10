@@ -25,9 +25,6 @@ body {
 	flex-basis: 16em;
 	background-color: white;
 }
-.item >img:hover {
-	transform: scale(1.5);
-}
 .item > img {
 	width: 16em;
 	height: auto;
