@@ -1,2 +1,0 @@
-# FBVMenu
-Online Flavor Menu
