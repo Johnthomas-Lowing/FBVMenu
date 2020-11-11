@@ -1,17 +1,17 @@
 let container = document.getElementById("freebase");
-let len;
+let len = inventory.length;
+let host = document.getElementById("hosting");
+if(host != null){
+	host.innerHTML = `Hosting definitions for <span id=numOfFlavors>${len}</span> flavors.`;
+}
 
 function cleanUp(){
 	container.innerHTML =`<div class="container" id="freebase"></div>`;
 }
 
-function alphabatize(){
-
-}
-
 display(inventory);
 let brands = document.getElementById("brands");
-let flavors = document.getElementById('flavors')
+let flavors = document.getElementById('flavors');
 
 let search = document.getElementById('search');
 search.addEventListener("keyup", e => {

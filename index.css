@@ -115,3 +115,6 @@ li input:focus {
 .zoom{
 	transform: scale(1.5);
 }
+#numOfFlavors {
+	color: #e74c3c;
+}
