@@ -32,9 +32,6 @@ h1 {
 	width: 16em;
 	height: auto;
 }
-.item > img:active {
-	transform: scale(1.5);
-}
 .item > h1 {
 	font-size: 16px;
 	text-align: center;
@@ -114,4 +111,7 @@ li input:focus {
    -webkit-user-select: none;
    -ms-user-select: none;
    user-select: none;
+}
+.zoom{
+	transform: scale(1.5);
 }

@@ -24,7 +24,6 @@ search.addEventListener("keyup", e => {
 	display(results);
 });
 
-
 function display(lib){
 	len = lib.length;
 	for(a = 0; a < len; a++){
