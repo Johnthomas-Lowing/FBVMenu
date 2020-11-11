@@ -2,7 +2,7 @@ let container = document.getElementById("freebase");
 let len = inventory.length;
 let host = document.getElementById("hosting");
 if(host != null){
-	host.innerHTML = `Hosting definitions for <span id=numOfFlavors>${len}</span> flavors.`;
+	host.innerHTML = `Hosting definitions for <span id=numOfFlavors>${len}+</span> flavors.`;
 }
 
 function cleanUp(){
