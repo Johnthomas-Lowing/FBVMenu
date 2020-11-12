@@ -29,7 +29,7 @@ function display(lib){
 	for(a = 0; a < len; a++){
 		container.innerHTML+=`<div class="item unselectable">
 						<h1>${lib[a].shelfName}</h1>
-						<img src="resources/freebase/${lib[a].brand}_${lib[a].product}.jpg">
+						<img src="resources/freebase/${lib[a].brand}_${lib[a].product}.webp">
 						<p>${lib[a].blurb}</p>
 						</div>`;
 	}	
