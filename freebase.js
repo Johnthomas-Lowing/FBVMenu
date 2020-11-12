@@ -1,9 +1,5 @@
 let container = document.getElementById("freebase");
 let len = inventory.length;
-let host = document.getElementById("hosting");
-if(host != null){
-	host.innerHTML = `Hosting definitions for <span id=numOfFlavors>${len}+</span> flavors.`;
-}
 
 function cleanUp(){
 	container.innerHTML =`<div class="container" id="freebase"></div>`;
@@ -27,11 +23,12 @@ search.addEventListener("keyup", e => {
 function display(lib){
 	len = lib.length;
 	for(a = 0; a < len; a++){
-		container.innerHTML+=`<div class="item unselectable">
-						<h1>${lib[a].shelfName}</h1>
-						<img src="resources/freebase/${lib[a].brand}_${lib[a].product}.webp">
-						<p>${lib[a].blurb}</p>
-						</div>`;
+		container.innerHTML+=
+		`<div class="item unselectable">
+		<h1>${lib[a].shelfName}</h1>
+		<img src="resources/freebase/${lib[a].brand.toLowerCase()}_${lib[a].product}.webp">
+		<p>${lib[a].blurb}</p>
+		</div>`;
 	}	
 }
 

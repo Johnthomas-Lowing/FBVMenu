@@ -32,12 +32,23 @@ h1 {
 	width: 16em;
 	height: auto;
 }
+.item > a > img {
+	width: 16em;
+	height: auto;
+}
 .item > h1 {
 	font-size: 16px;
 	text-align: center;
 }
-
+.item > a > h1 {
+	font-size: 16px;
+	text-align: center;
+}
 .item > p {
+	font-size: 12px;
+	text-align: center;
+}
+.item > a > p {
 	font-size: 12px;
 	text-align: center;
 }
