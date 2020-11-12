@@ -1,17 +1,22 @@
 Salts
-One Up Reign Berry
+	One Up
+Reign Berry
 Strawberry Gummy
 Strawberry cheesecake
 apple melon
 orgasm
 orgasm ice
 Mango Ice
-Fruitia Bl. Orange Cactus Cooler
+
+	Fruitia
+Bl. Orange Cactus Cooler
 Strawberry Coconut Refresher
 Pineapple citrus twist
 apple kiwi crush
 passion fruit guava punch
-naked lava flow
+
+	naked
+lava flow
 melon kiwi
 hawaiian pog
 mango
@@ -20,54 +25,62 @@ melon menthol
 berry menthol
 mint
 american patriots
-air factory berry rush
+
+	air factory
+berry rush
 crisp apple
 melon lush
 mystery
 blue razz
 mint
-twist salts iced pink punch
+
+	twist salts
+iced pink punch
 honeydew melon
 pink punch lemonade
 watermelon madness
-juice head peach pear
+
+	juice head
+peach pear
 watermelon lime
 blueberry lemon
 pineapple grapefruit
 strawberry kiwi
-jam monster blueberry
+
+jam monster
+blueberry
 strawberry
 ice melon colada
 ice mango tangerine guava
 strawberry watermelon apple
-cloud nurdz strawberry melon
+
+	cloud nurdz
+strawberry melon
 grape apple
 grape strawberry
 watermelon apple
 kiwi melon
-river reserve lemon drifter
-winter berry
-royal tobacco
-blue island punch
-tangie
-van waffle cone
-summer berry
-rutheless swamp thang
+
+	rutheless
+swamp thang
 paradize
 antidote ice
 strizzy
 tropic thunda
 ez duz it (ice)
 grape drank (ice)
-pod juice jewel mint
-jewel mint sapphire
-shijin dragon
+
+	shijin
+dragon
 tortoise ice
 phoenix
-met4 fairgrounds
+
+	met4
+fairgrounds
 pacific sangha
-surf rasp. dragon fruit ice tea
-aqua swell
+
+	aqua
+swell
 oasis
 mist
 flow
@@ -101,26 +114,30 @@ van waffle cone
 watermelon menthol
 wiki
 
-*	kilo sour watermelon
+*	kilo
+sour watermelon
 blue rasp
 strawberry
 green apple
 peach pineapple
 
-*	vapetasia rainbow road
+*	vapetasia
+rainbow road
 blackberry lemon
 killer kustard van
 strawberry
 blueberry
 
-*	choice iced watermelon lemonade
+*	choice iced
+watermelon lemonade
 watermelon
 snickerdoodle
 strawberry apple peach
 blueberry cereal
 green apple blue raspberry
 
-*	silverback lola
+*	silverback
+lola
 jenny
 booboo
 sandy

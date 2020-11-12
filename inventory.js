@@ -175,8 +175,106 @@ let inventory = [
 	{brand: "pacificnorthwest", shelfName: "Spearmint", product: "spearmint", blurb: "Menthol and mint leaf."},
 	{brand: "pacificnorthwest", shelfName: "Vanilla Nut Latte", product: "vanillanutlatte", blurb: "Soft vanilla, hazelnut and coffee."}, 
 ];
-let length = inventory.length;
+
+let saltInventory = [
+	{brand: "oneup", shelfName: " ", product: "logo", blurb: " "},
+	{brand: "oneup", shelfName: "Reign Berry", product: "reignberry", blurb: "Blue raspberry candy."},
+	{brand: "oneup", shelfName: "Strawberry Gummy", product: "strawberrygummy", blurb: " "},
+	{brand: "oneup", shelfName: "Strawberry Cheesecake", product: "strawberrycheesecake", blurb: " "},
+	{brand: "oneup", shelfName: "Apple Melon", product: "applemelon", blurb: "Green apple with a hint of watermelon."},
+	{brand: "oneup", shelfName: "Orgasm", product: "orgasm", blurb: "Peach, guava, and watermelon. Also availble in menthol."},
+	{brand: "oneup", shelfName: "Mango Ice", product: "mangoice", blurb: " "}, 
+
+	{brand: "fruitia", shelfName: " ", product: "logo", blurb: " "},
+	{brand: "fruitia", shelfName: "Blood Orange Cactus Cooler", product: "bloodorangecactuscooler", blurb: "Blood orange + Cactus."},
+	{brand: "fruitia", shelfName: "Strawberry Coconut Refresher", product: "strawberrycoconutrefresher", blurb: " "},
+	{brand: "fruitia", shelfName: "Pineapple Citrus Twist", product: "pineapplecitrustwist", blurb: " "},
+	{brand: "fruitia", shelfName: "Apple Kiwi Crush", product: "applekiwicrush", blurb: "Apple and kiwi hard candy."},
+	{brand: "fruitia", shelfName: "Passion Fruit Guava Punch", product: "passionfruitguavapunch", blurb: " "},
+
+	{brand: "naked", shelfName: " ", product: "logo", blurb: " "},
+	{brand: "naked", shelfName: "Lava Flow", product: "lavaflow", blurb: "Strawberry, pineapple, coconut."},
+	{brand: "naked", shelfName: "Melon Kiwi", product: "melonkiwi", blurb: "Watermelon and kiwi."},
+	{brand: "naked", shelfName: "Hawaiian P.O.G.", product: "hawaiianpog", blurb: "Passion, orange, and guava."},
+	{brand: "naked", shelfName: "Mango", product: "mango", blurb: "Mangos and cream."},
+	{brand: "naked", shelfName: "Really Berry", product: "reallyberry", blurb: "Blue raspberry with a dash of lemon."},
+	{brand: "naked", shelfName: "Melon", product: "melon", blurb: "Green honeydew melon menthol."},
+	{brand: "naked", shelfName: "Berry", product: "berry", blurb: "Blue raspberry with menthol."},
+	{brand: "naked", shelfName: "Mint", product: "mint", blurb: " "},
+	{brand: "naked", shelfName: "American Patriots", product: "americanpatriots", blurb: "Sweet and bold tobacco, made with real tobacco extracts."},
+
+	{brand: "airfactory", shelfName: " ", product: "logo", blurb: " "},
+	{brand: "airfactory", shelfName: "Berry Rush", product: "berryrush", blurb: "'Blueberry and strawberry taffy."},
+	{brand: "airfactory", shelfName: "Crisp Apple", product: "crispapple", blurb: "Red and green apple menthol."},
+	{brand: "airfactory", shelfName: "Mystery", product: "mystery", blurb: "Mixed berry taffy candy."},
+	{brand: "airfactory", shelfName: "Blue Razz", product: "bluerazz", blurb: "Blue raspberry taffy."},
+	{brand: "airfactory", shelfName: "Mint", product: "mint", blurb: "A mint menthol."},
+	{brand: "airfactory", shelfName: "Melon Lush", product: "melonlush", blurb: "Watermelon and honeydew."},
+
+	{brand: "twist", shelfName: " ", product: "logo", blurb: " "},
+	{brand: "twist", shelfName: "Iced Pink Punch", product: "icedpinkpunch", blurb: "Pink lemonade menthol"},
+	{brand: "twist", shelfName: "Honeydew Melon", product: "honeydewmelon", blurb: " "},
+	{brand: "twist", shelfName: "Pink Punch Lemonade", product: "pinkpunchlemonade", blurb: "Sweet strawberry pink lemonade."},
+	{brand: "twist", shelfName: "Watermelon Madness", product: "watermelonmadness", blurb: " "},
+
+	{brand: "juicehead", shelfName: " ", product: "logo", blurb: " "},
+	{brand: "juicehead", shelfName: "Peach Pear", product: "peachpear", blurb: " "},
+	{brand: "juicehead", shelfName: "Watermelon Lime", product: "watermelonlime", blurb: " "},
+	{brand: "juicehead", shelfName: "Blueberry Lemon", product: "blueberrylemon", blurb: " "},
+	{brand: "juicehead", shelfName: "Pineapple Grapefruit", product: "pineapplegrapefruit", blurb: " "},
+	{brand: "juicehead", shelfName: "Strawberry Kiwi", product: "strawberrykiwi", blurb: " "},
+
+	{brand: "monster", shelfName: " ", product: "logo", blurb: " "},
+	{brand: "monster", shelfName: "Blueberry", product: "blueberry", blurb: "25% toast, 25% butter, 50% blueberry jam."},
+	{brand: "monster", shelfName: "Strawberry", product: "strawberry", blurb: "25% toast, 25% butter, 50% strawberry jam."},
+	{brand: "monster", shelfName: "Melon Colada", product: "meloncolada", blurb: "Melon, pineapple, coconut cream, and menthol."},
+	{brand: "monster", shelfName: "Mango Tangerine Guava", product: "mangotangerineguava", blurb: "Featuring menthol."},
+	{brand: "monster", shelfName: "Strawberry Watermelon Apple", product: "strawberrywatermelonapple", blurb: " "},
+
+	{brand: "cloudnurdz", shelfName: " ", product: "logo", blurb: " "},
+	{brand: "cloudnurdz", shelfName: "Strawberry Melon", product: "strawberrymelon", blurb: " "},
+	{brand: "cloudnurdz", shelfName: "Grape Apple", product: "grapeapple", blurb: " "},
+	{brand: "cloudnurdz", shelfName: "Grape Strawberry", product: "grapestrawberry", blurb: " "},
+	{brand: "cloudnurdz", shelfName: "Watermelon Apple", product: "watermelonapple", blurb: " "},
+	{brand: "cloudnurdz", shelfName: "Kiwi Melon", product: "kiwimelon", blurb: " "},
+
+	{brand: "ruthless", shelfName: " ", product: "logo", blurb: " "},
+	{brand: "ruthless", shelfName: "Swamp Thang", product: "swampthang", blurb: "Sour candy apple."},
+	{brand: "ruthless", shelfName: "Paradize", product: "paradize", blurb: "Passion fruit, pear, and peaches."},
+	{brand: "ruthless", shelfName: "Grape Drank", product: "grapedrank", blurb: "Grape soda, also available in menthol."},
+	{brand: "ruthless", shelfName: "Ez Duz It", product: "ezduzit", blurb: "Strawberry watermelon, also available in menthol."},
+	{brand: "ruthless", shelfName: "Strizzy", product: "strizzy", blurb: "Raspberry, kiwi, and strawberry."},
+	{brand: "ruthless", shelfName: "Antidote", product: "antidote", blurb: "Peach, mango, and blue raspberry."},
+
+	{brand: "shijin", shelfName: " ", product: "logo", blurb: " "},
+	{brand: "shijin", shelfName: "Dragon", product: "dragon", blurb: "Lemon pound cake."},
+	{brand: "shijin", shelfName: "Tortoise", product: "tortoise", blurb: "Blue raspberry, green apple. Available in menthol, and with crushed mint."},
+	{brand: "shijin", shelfName: "Phoenix", product: "phoenix", blurb: "Peach mango slushy."},
+
+	{brand: "met4", shelfName: " ", product: "logo", blurb: " "},
+	{brand: "met4", shelfName: "Fairgrounds", product: "fairgrounds", blurb: "Deep fried cream cake."},
+	{brand: "met4", shelfName: "Pacific Sangha", product: "pacificsangha", blurb: "Strawberry milk straight from the carton."},
+
+	{brand: "aqua", shelfName: " ", product: "logo", blurb: ""},
+	{brand: "aqua", shelfName: "Oasis", product: "oasis", blurb: "Peach, cataloupe, papaya."},
+	{brand: "aqua", shelfName: "Mist", product: "mist", blurb: "Green apple, peach, and kiwi."},
+	{brand: "aqua", shelfName: "Flow", product: "flow", blurb: "Pineapple, guava, mango."},
+	{brand: "aqua", shelfName: "Pure", product: "pure", blurb: "Strawberry, apple, and watermelon."},
+	{brand: "aqua", shelfName: "Swell", product: "swell", blurb: "Sweet and sour watermelon candy."},
+];
+
+let combInv = inventory.concat(saltInventory);
+let logos = combInv.filter(a => {
+	return(a.product.includes("logo"));
+});
+let length = (inventory.length + saltInventory.length) - logos.length;
+let makers = [];
+for(b = 0; b < combInv.length; b++){
+	if(makers.includes(combInv[b].brand) != true){
+		makers.push(combInv[b].brand);
+	}
+}
 let host = document.getElementById("hosting");
 if(host != null){
-	host.innerHTML = `Hosting definitions for <span id=numOfFlavors>${length}+</span> flavors.`;
+	host.innerHTML = `Hosting definitions for <span id=numOfFlavors>${length}+</span> flavors across <span id=numOfFlavors>${makers.length}</span> manufacturers. <br> Ver. 1.9.3`;
 }
