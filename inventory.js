@@ -129,7 +129,6 @@ let inventory = [
 	{brand: "loyalty", shelfName: "Wata Mango", product: "watamango", blurb: "Watermelon mango."},
 	{brand: "loyalty", shelfName: "Ki Berry", product: "kiberry", blurb: "Kiwi strawberry."},
 	{brand: "loyalty", shelfName: "Pom-n-ade", product: "pomnade", blurb: "Pomegranate lemonade."},
-	{brand: "loyalty", shelfName: "Berry Cake", product: "berrycake", blurb: "Blueberry, blackberry, raspberry, cake."},
 
 	{brand: "boba", shelfName: " ", product: "logo", blurb: " "},
 	{brand: "boba", shelfName: "Dewwy", product: "dewwy", blurb: "Honeydew milk tea."},
