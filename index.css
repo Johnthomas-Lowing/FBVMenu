@@ -1,7 +1,5 @@
 body {
-	font-family: 'Roboto', sans-serif;
-}
-h1 {
+	font-family: 'Source Code Pro', monospace;
 	text-align: center;
 }
 .nude {
@@ -38,19 +36,15 @@ h1 {
 }
 .item > h1 {
 	font-size: 16px;
-	text-align: center;
 }
 .item > a > h1 {
 	font-size: 16px;
-	text-align: center;
 }
 .item > p {
 	font-size: 12px;
-	text-align: center;
 }
 .item > a > p {
 	font-size: 12px;
-	text-align: center;
 }
 
 ul {
@@ -72,7 +66,6 @@ li {
 li a {
   display: block;
   color: white;
-  text-align: center;
   padding: 12px 16px;
   text-decoration: none;
 }
@@ -81,7 +74,6 @@ li input {
 	border: none;
 	background-color: transparent;
 	padding: 12px 16px;
-	text-align: center;
 	font-size: 16px;
 	color: white;
 }
@@ -105,7 +97,6 @@ li input:focus {
   border: 2px solid white;
   color: white;
   padding: 1em 2em 1em 2em;
-  text-align: center;
   text-decoration: none;
   border-radius: 8px;
   display: inline-block;
