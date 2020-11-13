@@ -27,6 +27,8 @@ function display(contents){
 };
 
 function sort(man){
+	scrollToTop();
+	clearDisclaimer();
 	container.innerHTML = "";
 	products = cInv.filter(b => {
 		return(b.brand.toLowerCase().includes(man));
@@ -42,6 +44,22 @@ function sort(man){
 	}
 	brandButton.classList.remove("active");
 };
+
+function scrollToTop() {
+    var position =
+        document.body.scrollTop || document.documentElement.scrollTop;
+    if (position) {
+        window.scrollBy(0, -Math.max(1, Math.floor(position / 10)));
+        scrollAnimation = setTimeout("scrollToTop()", 20);
+    } else clearTimeout(scrollAnimation);
+}
+
+function clearDisclaimer(){
+	let disclaimer = document.getElementsByClassName("disclaimer");
+	for(b = 0; b < disclaimer.length; b++){
+		disclaimer[b].innerHTML = "";
+	}
+}
 
 
 display(manufacturers);

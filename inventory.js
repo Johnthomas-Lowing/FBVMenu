@@ -204,7 +204,7 @@ let saltInventory = [
 	{brand: "naked", shelfName: "American Patriots", product: "americanpatriots", blurb: "Sweet and bold tobacco, made with real tobacco extracts."},
 
 	{brand: "airfactory", shelfName: " ", product: "logo", blurb: " "},
-	{brand: "airfactory", shelfName: "Berry Rush", product: "berryrush", blurb: "'Blueberry and strawberry taffy."},
+	{brand: "airfactory", shelfName: "Berry Rush", product: "berryrush", blurb: "Blueberry and strawberry taffy."},
 	{brand: "airfactory", shelfName: "Mix Berry", product: "mixberry", blurb: "Mixed berry taffy candy."},
 	{brand: "airfactory", shelfName: "Blue Razz", product: "bluerazz", blurb: "Blue raspberry taffy."},
 	{brand: "airfactory", shelfName: "Mint", product: "mint", blurb: "A mint menthol."},
