@@ -1,6 +1,5 @@
 let container = document.getElementById("manufacturers");
 let brandButton = document.getElementById("backToBrands");
-let products;
 let cInv;
 let oInv;
 if(document.URL.includes("freebase")){
@@ -14,19 +13,20 @@ let manufacturers = cInv.filter(a => {
 	return(a.product.includes("logo"));
 });
 
-function display(contents){
+let products;
+function drawManufacturers(contents){
 	container.innerHTML = "";
 	length = contents.length;
 	for(a = 0; a < length; a++){
 		container.innerHTML +=
 		`<div class="item unselectable">
-		<a onclick="sort('${contents[a].brand.toLowerCase()}')"><img src="resources/${oInv}/${contents[a].brand.toLowerCase()}_${contents[a].product}.webp"></a>
+		<a onclick="drawJuice('${contents[a].brand.toLowerCase()}')"><img src="resources/${oInv}/${contents[a].brand.toLowerCase()}_${contents[a].product}.webp"></a>
 		</div>`;
 	}
 	brandButton.classList.add("active");	
 };
 
-function sort(man){
+function drawJuice(man){
 	scrollToTop();
 	clearDisclaimer();
 	container.innerHTML = "";
@@ -45,6 +45,7 @@ function sort(man){
 	brandButton.classList.remove("active");
 };
 
+let scrollAnimation;
 function scrollToTop() {
     var position =
         document.body.scrollTop || document.documentElement.scrollTop;
@@ -62,4 +63,4 @@ function clearDisclaimer(){
 }
 
 
-display(manufacturers);
+drawManufacturers(manufacturers);

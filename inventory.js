@@ -44,7 +44,7 @@ let inventory = [
 	{brand: 'vapetasia', shelfName: 'Strawberry', product: 'strawberry', blurb: 'Strawberry custard.'}, 
 	{brand: 'vapetasia', shelfName: 'Blueberry', product: 'strawberry', blurb: 'Blueberry custard.'},
 
-	{brand: 'fivestar', shelfName: ' ', product: 'logo', blurb: '00 | 03 | 06'},
+	{brand: 'fivestar', shelfName: 'Five Star', product: 'logo', blurb: '00 | 03 | 06'},
 	{brand: 'fivestar', shelfName: 'Stackin Chips', product: 'stackinchips', blurb: 'Iced watermelon lemonade.'},
 	{brand: 'fivestar', shelfName: 'Ballin', product: 'ballin', blurb: 'Just plain watermelon.'},
 	{brand: 'fivestar', shelfName: 'Hood Rich', product: 'hoodrich', blurb: 'A cinnamon and vanilla baked treat.'},
@@ -60,7 +60,7 @@ let inventory = [
 	{brand: 'oneup', shelfName: ' ', product: 'logo', blurb: '00 | 03 | 06 | 12'},
 	{brand: 'oneup', shelfName: 'Orgasm', product: 'orgasm', blurb: 'Peach, guava, and watermelon.<br>Also available in menthol.'},
 
-	{brand: 'transistor', shelfName: ' ', product: 'logo', blurb: '00 | 03 | 06'}, 
+	{brand: 'transistor', shelfName: 'Transistor', product: 'logo', blurb: '00 | 03 | 06'}, 
 	{brand: 'transistor', shelfName: 'Bluetiful Disaster', product: 'deepblueraspberry', blurb: 'Blue raspberry gummy.'},
 	{brand: 'transistor', shelfName: 'Tango Melon', product: 'tangerinemangowatermelon', blurb: ' '},
 	{brand: 'transistor', shelfName: "Lem'n Berry", product: 'exoticpinklemonade', blurb: 'Exotic pink lemonade.'},
@@ -262,7 +262,7 @@ let combInv = inventory.concat(saltInventory);
 let logos = combInv.filter(a => {
 	return(a.product.includes("logo"));
 });
-let length = (inventory.length + saltInventory.length) - logos.length;
+let productNum = (inventory.length + saltInventory.length) - logos.length;
 let makers = [];
 for(b = 0; b < combInv.length; b++){
 	if(makers.includes(combInv[b].brand) != true){
@@ -271,5 +271,5 @@ for(b = 0; b < combInv.length; b++){
 }
 let host = document.getElementById("hosting");
 if(host != null){
-	host.innerHTML = `Hosting definitions for <span id=numOfFlavors>${length}+</span> flavors across <span id=numOfFlavors>${makers.length}</span> manufacturers. <br> Ver. 2.0.1`;
+	host.innerHTML = `Hosting definitions for <span id=numOfFlavors>${productNum}+</span> flavors across <span id=numOfFlavors>${makers.length}</span> manufacturers. <br> Ver. 2.0.1`;
 }
