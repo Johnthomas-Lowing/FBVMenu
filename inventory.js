@@ -205,8 +205,7 @@ let saltInventory = [
 
 	{brand: "airfactory", shelfName: " ", product: "logo", blurb: " "},
 	{brand: "airfactory", shelfName: "Berry Rush", product: "berryrush", blurb: "'Blueberry and strawberry taffy."},
-	{brand: "airfactory", shelfName: "Crisp Apple", product: "crispapple", blurb: "Red and green apple menthol."},
-	{brand: "airfactory", shelfName: "Mystery", product: "mystery", blurb: "Mixed berry taffy candy."},
+	{brand: "airfactory", shelfName: "Mix Berry", product: "mixberry", blurb: "Mixed berry taffy candy."},
 	{brand: "airfactory", shelfName: "Blue Razz", product: "bluerazz", blurb: "Blue raspberry taffy."},
 	{brand: "airfactory", shelfName: "Mint", product: "mint", blurb: "A mint menthol."},
 	{brand: "airfactory", shelfName: "Melon Lush", product: "melonlush", blurb: "Watermelon and honeydew."},
@@ -232,7 +231,7 @@ let saltInventory = [
 	{brand: "monster", shelfName: "Strawberry Watermelon Apple", product: "strawberrywatermelonapple", blurb: " "},
 
 	{brand: "cloudnurdz", shelfName: " ", product: "logo", blurb: " "},
-	{brand: "cloudnurdz", shelfName: "Strawberry Melon", product: "strawberrymelon", blurb: " "},
+	{brand: "cloudnurdz", shelfName: "Strawberry Lemon", product: "strawberrylemon", blurb: " "},
 	{brand: "cloudnurdz", shelfName: "Grape Apple", product: "grapeapple", blurb: " "},
 	{brand: "cloudnurdz", shelfName: "Grape Strawberry", product: "grapestrawberry", blurb: " "},
 	{brand: "cloudnurdz", shelfName: "Watermelon Apple", product: "watermelonapple", blurb: " "},
@@ -248,12 +247,8 @@ let saltInventory = [
 
 	{brand: "shijin", shelfName: " ", product: "logo", blurb: " "},
 	{brand: "shijin", shelfName: "Dragon", product: "dragon", blurb: "Lemon pound cake."},
-	{brand: "shijin", shelfName: "Tortoise", product: "tortoise", blurb: "Blue raspberry, green apple. Available in menthol, and with crushed mint."},
+	{brand: "shijin", shelfName: "Tortoise", product: "tortoise", blurb: "Blue raspberry, green apple.<br>Available in menthol, and with crushed mint."},
 	{brand: "shijin", shelfName: "Phoenix", product: "phoenix", blurb: "Peach mango slushy."},
-
-	{brand: "met4", shelfName: " ", product: "logo", blurb: " "},
-	{brand: "met4", shelfName: "Fairgrounds", product: "fairgrounds", blurb: "Deep fried cream cake."},
-	{brand: "met4", shelfName: "Pacific Sangha", product: "pacificsangha", blurb: "Strawberry milk straight from the carton."},
 
 	{brand: "aqua", shelfName: " ", product: "logo", blurb: ""},
 	{brand: "aqua", shelfName: "Oasis", product: "oasis", blurb: "Peach, cataloupe, papaya."},
