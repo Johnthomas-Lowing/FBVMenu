@@ -27,8 +27,9 @@ function drawManufacturers(contents){
 };
 
 function drawJuice(man){
-	scrollToTop();
 	clearDisclaimer();
+	scrollToTop();
+	drawBack();
 	container.innerHTML = "";
 	products = cInv.filter(b => {
 		return(b.brand.toLowerCase().includes(man));
@@ -45,9 +46,22 @@ function drawJuice(man){
 	brandButton.classList.remove("active");
 };
 
+let nav = document.getElementById("nav");
+let back;
+function drawBack(){
+	back = document.createElement('a');
+	back.setAttribute('onclick','goBack()');
+	back.innerText = "Back";
+	nav.insertAdjacentElement("afterbegin", back);
+}
+function goBack(){
+	drawManufacturers(manufacturers);
+	nav.removeChild(back);
+}
+
 let scrollAnimation;
 function scrollToTop() {
-    var position =
+    let position =
         document.body.scrollTop || document.documentElement.scrollTop;
     if (position) {
         window.scrollBy(0, -Math.max(1, Math.floor(position / 10)));
