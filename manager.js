@@ -38,8 +38,8 @@ function drawJuice(man){
 		container.innerHTML +=
 		`<div class="item unselectable">
 		<img src="resources/${oInv}/${products[a].brand.toLowerCase()}_${products[a].product}.webp">
-		<p><h1>${products[a].shelfName}</h1><br>
-		${products[a].blurb}</p>
+		<h1>${products[a].shelfName}</h1>
+		<p>${products[a].blurb}</p>
 		</div>`;
 	}
 	brandButton.classList.remove("active");
@@ -61,6 +61,5 @@ function clearDisclaimer(){
 		disclaimer[b].innerHTML = "";
 	}
 }
-
 
 drawManufacturers(manufacturers);

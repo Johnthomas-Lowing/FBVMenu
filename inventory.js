@@ -271,5 +271,5 @@ for(b = 0; b < combInv.length; b++){
 }
 let host = document.getElementById("hosting");
 if(host != null){
-	host.innerHTML = `Hosting definitions for <span id=numOfFlavors>${productNum}+</span> flavors across <span id=numOfFlavors>${makers.length}</span> manufacturers. <br> Ver. 2.0.1`;
+	host.innerHTML = `Hosting definitions for <span class="fatboysRed">${productNum}+</span> flavors across <span class="fatboysRed">${makers.length}</span> manufacturers. <br> Ver. 2.0.1`;
 }
