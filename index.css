@@ -22,6 +22,7 @@ body {
 .item img {
 	width: 16em;
 	height: auto;
+	margin-bottom: 1px;
 }
 .item h1 {
 	font-size: 18px;
@@ -62,7 +63,20 @@ body {
 }
 .active {
   background-color: black;
-  border: 1px solid #e74c3c;
+}
+.search {
+  float: left;
+  display: block;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  padding: 1em;
+  text-decoration: none;
+  font-size: 17px;
+  float: right;
+  width: 3.5em;
 }
 .unselectable {
    -moz-user-select: -moz-none;

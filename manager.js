@@ -26,13 +26,15 @@ function drawManufacturers(contents){
 	brandButton.classList.add("active");	
 };
 
-function drawJuice(man){
+function drawJuice(parameter){
 	clearDisclaimer();
 	scrollToTop();
 	drawBack();
 	container.innerHTML = "";
 	products = cInv.filter(b => {
-		return(b.brand.toLowerCase().includes(man));
+		return(b.shelfName.toLowerCase().includes(parameter) ||
+			b.brand.toLowerCase().includes(parameter) ||
+			b.blurb.toLowerCase().includes(parameter))
 	});
 	length = products.length;
 	for(a = 0; a < length; a++){
@@ -76,4 +78,13 @@ function clearDisclaimer(){
 	}
 }
 
+
 drawManufacturers(manufacturers);
+document.getElementById("search").addEventListener("keyup", e => {
+	if(e.keyCode == "32" || e.keyCode == "13"){
+		const searchString = e.target.value.toLowerCase();
+	  	const terms = searchString.split(" ");
+	  	drawJuice(terms);
+	  	nav.removeChild(back);	
+	}
+});
