@@ -53,8 +53,11 @@ let back;
 function drawBack(){
 	back = document.createElement('a');
 	back.setAttribute('onclick','goBack()');
+	back.setAttribute('id', 'back');
 	back.innerText = "Back";
-	nav.insertAdjacentElement("afterbegin", back);
+	if(document.getElementById("back") == undefined){
+		nav.insertAdjacentElement("afterbegin", back);
+	}
 }
 function goBack(){
 	drawManufacturers(manufacturers);
@@ -78,13 +81,14 @@ function clearDisclaimer(){
 	}
 }
 
-
+let terms;
 drawManufacturers(manufacturers);
 document.getElementById("search").addEventListener("keyup", e => {
-	if(e.keyCode == "32" || e.keyCode == "13"){
-		const searchString = e.target.value.toLowerCase();
-	  	const terms = searchString.split(" ");
+	const searchString = e.target.value.toLowerCase();
+	  terms = searchString.split(" ");
+	  if(terms == ""){
+	  	drawManufacturers(manufacturers);
+	  } else {
 	  	drawJuice(terms);
-	  	nav.removeChild(back);	
-	}
+	  }
 });
