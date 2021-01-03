@@ -25,5 +25,6 @@ document.addEventListener('keydown', function(e) {
 });
 
 function levelSeven() {
-  window.location.href = "invGen/lib.html";
+  //window.location.href = "invGen/lib.html";
+  window.location.href = "public_html/index.html";
 }
