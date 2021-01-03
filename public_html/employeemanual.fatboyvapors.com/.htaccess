@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Manaul"
+AuthUserFile "/home/fbvlucid/.htpasswds/public_html/employeemanual.fatboyvapors.com/passwd"
+require valid-user
