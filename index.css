@@ -78,6 +78,9 @@ body {
   float: right;
   width: 3.5em;
 }
+.search:hover {
+  cursor: pointer;
+}
 .unselectable {
    -moz-user-select: -moz-none;
    -khtml-user-select: none;

@@ -1,4 +1,4 @@
-let container = document.getElementById("manufacturers");
+let container = document.getElementById("container");
 let brandButton = document.getElementById("backToBrands");
 let cInv;
 let oInv;
