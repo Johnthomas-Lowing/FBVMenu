@@ -1,11 +1,25 @@
 body {
-	font-family: 'Source Code Pro', monospace;
+	font-family: 'Lato', sans-serif;
 	text-align: center;
+  font-weight: 100;
 }
 .container {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
+}
+#header{
+  font-size: 6em;
+  margin-bottom: .25em;
+}
+@media screen and (max-width: 600px) {
+  #header{
+    font-size: 3em;
+  }
+}
+hr {
+  border: 2px solid #e74c3c;
+  border-radius: 3px;
 }
 .item {
 	display: flex;
