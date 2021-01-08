@@ -1,0 +1,155 @@
+body {
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+  font-weight: 100;
+  margin-bottom: 5em;
+}
+.container {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+#header{
+  font-size: 6em;
+  margin-bottom: .25em;
+}
+@media screen and (max-width: 600px) {
+  #header{
+    font-size: 3em;
+  }
+}
+hr {
+  border: 2px solid #e74c3c;
+  border-radius: 3px;
+}
+.item {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+
+	margin: .75em;
+	padding-top: 2em;
+
+	flex-basis: 16em;
+	background-color: white;
+}
+.item img {
+	width: 16em;
+	height: auto;
+	margin-bottom: 1px;
+}
+.item h1 {
+	font-size: 18px;
+	margin: 0;
+}
+.item p {
+	margin: 0;
+	font-size: 16px;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {display: none;}
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    bottom:0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .navbar input {
+    padding-top: 1.2em;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .navbar input {
+    width: 4em;
+    font-size: 12px;
+    padding-top: 2.5em;
+  }
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  text-align: center;
+  text-shadow: 1px 1px 1px black;
+  padding: 1em;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+.active {
+  background-color: black;
+}
+
+.navbar .icon {
+  display: none;
+}
+
+.navButton {
+  color: white;
+  display: inline-block;
+  background-color: #e74c3c;
+  padding: 1em 2em 1em 2em;
+  border-radius: 8px;
+  font-size: 18px;
+  text-shadow: 1px 1px 1px black;
+  text-decoration: none;
+  transition-duration: .2s;
+}
+
+.search {
+  float: left;
+  display: block;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  text-decoration: none;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 20px;
+  padding: 1em 1em 1em 1em;
+  width: 4em;
+}
+.search:hover {
+  cursor: pointer;
+}
+.unselectable {
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+::selection {
+    background-color: transparent;
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+.fatboysRed {
+	color: #e74c3c;
+}

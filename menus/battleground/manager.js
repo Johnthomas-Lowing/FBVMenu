@@ -20,7 +20,7 @@ function drawManufacturers(contents){
 	for(a = 0; a < length; a++){
 		container.innerHTML +=
 		`<div class="item unselectable">
-		<a onclick="drawJuice('${contents[a].brand.toLowerCase()}')"><img src="resources/${oInv}/${contents[a].brand.toLowerCase()}_${contents[a].product}.webp"></a>
+		<a onclick="drawJuice('${contents[a].brand.toLowerCase()}')"><img src="../../resources/${oInv}/${contents[a].brand.toLowerCase()}_${contents[a].product}.webp"></a>
 		</div>`;
 	}
 	brandButton.classList.add("active");	
@@ -40,7 +40,7 @@ function drawJuice(parameter){
 	for(a = 0; a < length; a++){
 		container.innerHTML +=
 		`<div class="item unselectable">
-		<img src="resources/${oInv}/${products[a].brand.toLowerCase()}_${products[a].product}.webp">
+		<img src="../../resources/${oInv}/${products[a].brand.toLowerCase()}_${products[a].product}.webp">
 		<h1>${products[a].shelfName}</h1>
 		<p>${products[a].blurb}</p>
 		</div>`;
