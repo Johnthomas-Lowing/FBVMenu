@@ -44,6 +44,7 @@ function consolidate(){
 
 function generate(){
 	for(a = 0; a < producers.length; a++){
+		library.innerHTML += `{brand: "${producers[a].toLowerCase().split(" ").join("")}", shelfName: " ", product: "logo", blurb: " "}, <br>`;
 		for(b = 0; b < products.length; b++){
 			if(products[b].includes(producers[a])){
 				let brand = producers[a].toLowerCase().split(" ").join("");
@@ -51,14 +52,13 @@ function generate(){
 				products[b] = products[b].replace(/\s\s+/g, ' ');
 				let shelfName = products[b].trim();
 				let item = shelfName.toLowerCase().split(" ").join("");
-				library.innerHTML += `{brand: "${brand}", shelfName: "${shelfName}", product: "${item}", blurb: "define me"}, <br>`;
+				library.innerHTML += `{brand: "${brand}", shelfName: "${shelfName}", product: "${item}", blurb: "*"}, <br>`;
 			}
 		}
-		library.innerHTML += `{brand: "${producers[a].toLowerCase().split(" ").join("")}", shelfName: " ", product: "logo", blurb: " "}, <br>`;
+		
 	}
 }
 
 remove(forbidden);
 consolidate();
-console.log(products);
 generate();
