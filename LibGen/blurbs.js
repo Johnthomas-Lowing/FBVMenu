@@ -101,6 +101,7 @@ let blurbs = {
 		tortoiseblood: "Green apple, blue raspberry.",
 		dragoncloud: "Cinnamon, sugar, vanilla ice cream, all on a savory pastry.",
 		phoenixtears: "Sugar cookie with vanilla custard.",
+		amy: "Vanilla, caramel, and peanut butter brittle.",
 	},
 	juicehead: {
 		peachpear: " ",
@@ -165,7 +166,6 @@ let blurbs = {
 		icedmangoberries: " ",
 		blueberrybananamuffin: " ",
 		melonberries: " ",
-		icedmelonberries: " ",
 		strawberrydaiquiri: " ",
 		sugarednectarine: " ",
 		maplebutter: " ",
