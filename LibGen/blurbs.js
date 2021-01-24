@@ -116,9 +116,11 @@ let blurbs = {
 	jammonster: {
 		mangerineguavaice: "Mango, tangerine, guava, menthol.",
 		mangopeachguava: " ",
+		meloncolada: "Melon, pineapple, and coconut cream.",
 		meloncoladaice: "Melon, pineapple, coconut cream, and menthol.",
 		blueberryraspberrylemon: " ",
 		strawberrykiwipomegranate: " ",
+		strawmelonapple: "strawnerry, watermelon, and apple.",
 		strawmelonappleice: "Strawberry watermelon menthol.",
 		banana: "25% Toast, 25% Butter, 50% Banana.",
 		blueberry: "25% Toast, 25% Butter, 50% Blueberry Jam.",
@@ -139,6 +141,7 @@ let blurbs = {
 		peachbluerazz: " ",
 		grapeapple: " ",
 		grapestrawberry: " ",
+		kiwimelon: " ",
 	},
 	fruitia: {
 		pineapplecitrustwist: "Pineapple mango citrus.",
@@ -147,6 +150,7 @@ let blurbs = {
 		bloodorangecactuscooler: " ",
 		passionfruitguavapunch: " ",
 		smoothbananaice: " ",
+		citrustwist: "Pineapple mango citrus.",
 	},
 	pachamama: {
 		huckleberrypearacai: " ",
@@ -195,6 +199,7 @@ let blurbs = {
 		swampthang: "Sour candy apple.",
 		rage: "Apple mango.",
 		paradize: "Passion fruit, pear, and peaches.",
+		paradise: "Passion fruit, pear, and peaches.",
 		slurricane: "Peach, papaya, and guava.",
 		grapedrank: "Grape soda.",
 		grapedrankonice: "Grape soda with menthol.",
@@ -203,6 +208,7 @@ let blurbs = {
 		strizzy: "Raspberry, kiwi, and strawberry.",
 		antidote: "Peach, mango, and blue raspberry.",
 		skirskirronice: "Honeydew melon, green apple, menthol.",
+		tropicthunda: "Guava and mixed berries.",
 	},
 	airfactory: {
 		melonlush: "Watermelon and honeydew taffy.",
@@ -218,7 +224,9 @@ let blurbs = {
 		menthol: "Probably closer to mint, but that's okay.",
 		mint: "Mintier than menthol.",
 		crispapple: "Red and green apple menthol.",
-		creamycrunch: "Nutmeg, cinnamon, glaze, and pastry."
+		creamycrunch: "Nutmeg, cinnamon, glaze, and pastry.",
+		custardtobacco: "Smooth vanilla custard with tobacco.",
+		strawberrykiwi: " ",
 	},
 	aqua: {
 		oasis: "Peach, cataloupe, papaya.",
@@ -272,12 +280,16 @@ let blurbs = {
 		berryamber: "Strawberry jam, honey, and graham cracker.",
 		crimsonno1strawberrymason: "Strawberry lemonade.",
 		greenno1honeydewmelonchew: "Watermelon and honeydew.",
-		pink0icedpinkpunchlemonade: "Pink lemonade with menthol",
+		honeydewmelonchew: "Watermelon and honeydew.",
+		pink0icedpinkpunchlemonade: "Pink lemonade with menthol.",
+		icedpinkpunchlemonade: "Pink lemonade with menthol.",
 		pinkno1pinkpunch: "Pink lemonade.",
+		pinkpunchlemonade: "Pink punch lemonade.",
 		purpleno1: "Tropical mixed berry lemonade.",
 		rainbowno1: "Sour skittles.",
 		spaceno1: "Strawberry and kiwi 'popping' candy.",
 		whiteno1: "Pineapple candy.",
+		watermelonmadness: "Watermelon and lemonade.",
 
 	},
 	magicvapor: {
@@ -308,6 +320,7 @@ let blurbs = {
 	},
 	svrf: {
 		fairground: "Deep fried cream cake.",
+		fairgrounds: "Deep fried cream cake.",
 		goldenticket: "Chocolate milk.",
 		pacificsangha: "Strawberry milk.",
 	},
@@ -315,6 +328,13 @@ let blurbs = {
 
 	},
 	ripevapes: {
+
+	},
+	podjuice: {
+		jewelmint: "Just plain mint, little to no menthol.",
+		jewelmintsapphire: "Mint and menthol.",
+	},
+	solace: {
 
 	},
 
