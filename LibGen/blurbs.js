@@ -44,13 +44,13 @@ let blurbs = {
 		hawaiianpog: "Passion fruit, orange, and guava.",
 		lavaflow: "Strawberry, pineapple, and coconut.",
 		reallyberryveryberry: "Blue raspberry with a hint of lemon.",
-		mentholpolarbreeze: "Honeydew, pineapple, and cantaloupe menthol.",
-		mentholbrainfreeze: "Strawberry pomegranate menthol.",
-		mentholverycool: "Blue raspberry menthol.",
+		polarbreeze: "Honeydew, pineapple, and cantaloupe menthol.",
+		brainfreeze: "Strawberry pomegranate menthol.",
+		verycool: "Blue raspberry menthol.",
 		americanpatriot: "Bold tobacco with a hint of something sweet.",
 		cubanblend: "Plain and natural tobacco, middle of the road.",
 		eurogold: "Natural tobacco with vanilla custard.",
-		mentholcrispmenthol: "Just plain menthol.",
+		crispmenthol: "Just plain menthol.",
 	},
 	kilo: {
 		watermelonsours: "Watermelon sour straws.",
@@ -80,6 +80,7 @@ let blurbs = {
 		jenny: "Strawberry, bubblegum, mint.",
 		booboo: "Grape and blueberry.",
 		sandy: "Strawberry watermelon.",
+		amy: "Vanilla, caramel, and peanut butter brittle.",
 		harambe: "Cinnamon and cream liqueur.",
 	},
 	oneupvapor: {
@@ -101,7 +102,6 @@ let blurbs = {
 		tortoiseblood: "Green apple, blue raspberry.",
 		dragoncloud: "Cinnamon, sugar, vanilla ice cream, all on a savory pastry.",
 		phoenixtears: "Sugar cookie with vanilla custard.",
-		amy: "Vanilla, caramel, and peanut butter brittle.",
 	},
 	juicehead: {
 		peachpear: " ",
@@ -111,6 +111,7 @@ let blurbs = {
 		blueberrylemon: " ",
 		blueberrylemonfreeze: "With menthol.",
 		strawberrykiwi: " ",
+		guavapeach: " ",
 	},
 	jammonster: {
 		mangerineguavaice: "Mango, tangerine, guava, menthol.",
@@ -123,9 +124,12 @@ let blurbs = {
 		blueberry: "25% Toast, 25% Butter, 50% Blueberry Jam.",
 		strawberry: "25% Toast, 25% Butter, 50% Strawberry Jam.",
 		raspberry: "25% Toast, 25% Butter, 50% Raspberry Jam.",
+		grape: "25% Toast, 25% Butter, 50% Grape Jam.",
+		mixedberry: "25% Toast, 25% Butter, 50% Strawberry, Blueberry, and Raspberry Jam. How exciting.",
 		blackberry: "25% Toast, 25% Butter, 50% Blackberry Jam.",
 		pbjammonstergrape: "25% Toast, 25% Peanut Butter, 50% Grape Jam.",
 		pbjammonsterstrawberry: "25% Toast, 25% Peanut Butter, 50% Strawberry Jam.",
+		vanillacustard: "Plain vanilla custard.",
 	},
 	cloudnurdz: {
 		strawberrylemon: " ",
@@ -169,6 +173,9 @@ let blurbs = {
 		strawberrydaiquiri: " ",
 		sugarednectarine: " ",
 		maplebutter: " ",
+		guavapunch: "Guava fruit punch.",
+		theabyss: " ",
+		thevoyage: " ",
 	},
 	loyalty: {
 		watamango: "Watermelon mango.",
@@ -237,6 +244,7 @@ let blurbs = {
 	skwezed: {
 		grapefruit: " ",
 		greenapple: " ",
+		peach: " ",
 	},
 	thehypecollection: {
 		america: "Red white and blue rocket pop.",
