@@ -36,7 +36,6 @@ let blurbs = {
 		sweetcreambutterscotch: " ",
 		caramelappledrifter: "Caramel apple custard.",
 		marshmallowcustard: "Marshmallow custard.",
-
 		smoothsweettobacco: "Tobacco with a hint of vanilla cream.",
 		oldwolf: "Just like those little rootbeer barrel candies."
 	},
@@ -335,7 +334,20 @@ let blurbs = {
 		jewelmintsapphire: "Mint and menthol.",
 	},
 	solace: {
-
+		bananadragonberry: "Dragonfruit and banana.",
+		berrybash: "Mixed berries.",
+		blueslemonade: "Lemonade with a hint of blue raspberry.",
+		bluesmango: "Mango with a hint of... blue raspberry.",
+		cooltobacco: "Classic tobacco with a bit of menthol.",
+		dragonthol: "Dragonfruit and menthol.",
+		grape: " ",
+		juicedapple: " ",
+		lemonlimefusion: " ",
+		pineapple: " ",
+		seablueberry: " ",
+		seedlesswatermelon: "There actually are seeds, be careful.",
+		strawberrykiwiice: " ",
+		tropicstrawberry: " ",
 	},
 
 };

@@ -3,7 +3,7 @@ let forbidden = ["mg", "ml", "mL", "ML", "Ml",
 	"Menthol",
 	"eliquid", "eLiquid", "e-liquid", "e-Liquid", "E-Liquid", "E-liquid", "e-Liquid", "ELiquid", "Eliquid", "E Liquid", "Liquids",
 	"ejuice", "eJuice", "EJuice", "e-juice", "e-Juice", "E-juice", "E-Juice", "Ejuice", "Juice Co", "Vapor", "vapor",
-	"Nicotine", "nicotine", "Nic", "nic", "Salts", "salts", "Salt", "salt",];
+	"Nicotine", "nicotine", "Nic ", "nic ", "Salts", "salts", "Salt", "salt",];
 let producers = [
 	'Air Factory',
 	'Aqua',
@@ -104,7 +104,7 @@ function generate(){
 				products[b] = products[b].replace(/\s\s+/g, ' ');
 				let shelfName = products[b].trim();
 				let item = shelfName.toLowerCase().split(" ").join("");
-				libraryContents.push(`{brand: "${brand}", shelfName: "${shelfName}", product: "${item}", blurb: "${blurbs[brand][item]}", <br>`);
+				libraryContents.push(`{brand: "${brand}", shelfName: "${shelfName}", product: "${item}", blurb: "${blurbs[brand][item]}"}, <br>`);
 			}
 		}
 		
