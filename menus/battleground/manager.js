@@ -1,55 +1,29 @@
 let container = document.getElementById("container");
 let brandButton = document.getElementById("backToBrands");
-let cInv;
-let oInv;
-if(document.URL.includes("freebase")){
-	cInv = inventory;
-	oInv = "freebase";
-} else if(document.URL.includes("salt")){
-	cInv = saltInventory;
-	oInv = "salts";
-}
-let manufacturers = cInv.filter(a => {
-	return(a.product.includes("logo"));
-});
-
-let products;
-function drawManufacturers(contents){
-	container.innerHTML = "";
-	length = contents.length;
-	for(a = 0; a < length; a++){
-		container.innerHTML +=
-		`<div class="item unselectable">
-		<a onclick="drawJuice('${contents[a].brand.toLowerCase()}')"><img src="../../resources/${oInv}/${contents[a].brand.toLowerCase()}_${contents[a].product}.webp"></a>
-		</div>`;
-	}
-	brandButton.classList.add("active");	
-};
-
-function drawJuice(parameter){
-	clearDisclaimer();
-	window.scrollTo(0, 0);
-	drawBack();
-	container.innerHTML = "";
-	products = cInv.filter(b => {
-		return(b.shelfName.toLowerCase().includes(parameter) ||
-			b.brand.toLowerCase().includes(parameter) ||
-			b.blurb.toLowerCase().includes(parameter))
-	});
-	length = products.length;
-	for(a = 0; a < length; a++){
-		container.innerHTML +=
-		`<div class="item unselectable">
-		<img src="../../resources/${oInv}/${products[a].brand.toLowerCase()}_${products[a].product}.webp">
-		<h1>${products[a].shelfName}</h1>
-		<p>${products[a].blurb}</p>
-		</div>`;
-	}
-	brandButton.classList.remove("active");
-};
-
 let nav = document.getElementById("nav");
-let back;
+let length;
+let operatingInventory;
+let juice;
+function checkPage(){
+	if(document.URL.includes("freebase")){
+		operatingInventory = inventory;
+		juice = "freebase";
+	} else if(document.URL.includes("salt")){
+		operatingInventory = saltInventory;
+		juice = "salts";
+	}
+};
+function navbar() {
+  if (nav.className === "navbar unselectable") {
+    nav.className += " responsive";
+  } else {
+    nav.className = "navbar unselectable";
+	}
+}
+function goBack() {
+	draw("logo");
+	nav.removeChild(back);
+}
 function drawBack(){
 	if(document.getElementById("back") == undefined){
 		back = document.createElement('a');
@@ -59,37 +33,51 @@ function drawBack(){
 		nav.insertAdjacentElement("afterbegin", back);
 	}
 }
-function goBack(){
-	drawManufacturers(manufacturers);
-	nav.removeChild(back);
-}
-
-function clearDisclaimer(){
-	let disclaimer = document.getElementsByClassName("disclaimer");
-	for(b = 0; b < disclaimer.length; b++){
-		disclaimer[b].innerHTML = "";
+let results;
+function filter(term){
+	results = operatingInventory.filter(f => {
+		return(f.brand.includes(term) ||
+		f.shelfName.includes(term) ||
+		f.product.includes(term) ||
+		f.blurb.includes(term));
+	})
+	return(results);
+};
+let block;
+function buildHTML(a, content){
+	block = `<div class="item unselectable">
+			<img src="../../resources/${juice}/${content[a].brand.toLowerCase()}_${content[a].product}.webp"
+			onclick="draw('${content[a].brand}'); drawBack();">`;
+	if(content[a].product == "logo"){
+		block += `</div>`
+	} else {
+		block +=`<h1>${content[a].shelfName}</h1>
+				<p>${content[a].blurb}</p>
+				</div>`;
 	}
-}
-
-let terms;
-drawManufacturers(manufacturers);
-document.getElementById("search").addEventListener("keyup", e => {
-	const searchString = e.target.value.toLowerCase();
-	  terms = searchString.split(" ");
-	  if(terms == ""){
-	  	drawManufacturers(manufacturers);
-	  } if(terms == "all"){
-	  	drawJuice();
-	  } else {
-	  	drawJuice(terms);
-	  }
-});
-
-function navbar() {
-  var x = document.getElementById("nav");
-  if (x.className === "navbar") {
-    x.className += " responsive";
-  } else {
-    x.className = "navbar";
+};
+function draw(handler){
+	container.innerHTML = "";
+	let results = filter(handler);
+	for(a = 0; a < results.length; a++){
+		buildHTML(a, results);
+		container.innerHTML += block;
 	}
-}
+};
+function listen(){
+	document.getElementById("search").addEventListener("keyup", e => {
+		const searchString = e.target.value.toLowerCase();
+		//terms = searchString.split(" ");
+		if(searchString == ""){
+			draw("logo");
+		} else { 
+			draw(`${searchString}`);
+		};
+	});
+};
+checkPage();
+draw("logo");
+listen();
+
+
+
