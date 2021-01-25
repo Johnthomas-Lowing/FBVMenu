@@ -23,6 +23,7 @@ function navbar() {
 function goBack() {
 	draw("logo");
 	nav.removeChild(back);
+	document.getElementById("search").value = '';
 }
 function drawBack(){
 	if(document.getElementById("back") == undefined){
@@ -71,6 +72,7 @@ function listen(){
 		if(searchString == ""){
 			draw("logo");
 		} else { 
+			drawBack();
 			draw(`${searchString}`);
 		};
 	});
