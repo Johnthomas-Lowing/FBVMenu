@@ -62,8 +62,11 @@ let blurbs = {
 		blackberrylemonade: "Sweet and tart, blackberries and lemon.",
 		killerkustard: "Vanilla custard.",
 		strawberrykillerkustard: "Strawberry custard.",
+		killerkustardstrawberry: "Strawberry custard.",
 		blueberrykillerkustard: "Blueberry custard.",
-		lemonkillerkustard: "Lemon custard.",	
+		lemonkillerkustard: "Lemon custard.",
+		royaltyiisalt: "Vanilla with mild tobacco.",
+		rainbowroad: "Mixed fruit cereal, like the little circles."	
 	},
 	choices: {
 		stackinchips: "Iced watermelon lemonade.",
@@ -95,12 +98,17 @@ let blurbs = {
 		nazzo: "Grapefruit",
 	},
 	shijin: {
-		tigersmilk: "Peach Mango Slushy.",
+		tigersmilk: "Mangoes and peaches.",
+		tiger: "Peach mango slushy.",
 		tortoiseontherocks: "Green apple, blue raspberry, and crushed mint.",
+		tortoise: "Green apple, blue raspberry.",
 		tortoiseonice: "Green apple, blue raspberry, and menthol.",
+		tortoiseonice: "Green apple, blue raspberry with menthol.",
 		tortoiseblood: "Green apple, blue raspberry.",
 		dragoncloud: "Cinnamon, sugar, vanilla ice cream, all on a savory pastry.",
+		dragon: "Lemon tart.",
 		phoenixtears: "Sugar cookie with vanilla custard.",
+		phoenix: "Guava lychee.",
 	},
 	juicehead: {
 		peachpear: " ",
@@ -119,7 +127,7 @@ let blurbs = {
 		meloncoladaice: "Melon, pineapple, coconut cream, and menthol.",
 		blueberryraspberrylemon: " ",
 		strawberrykiwipomegranate: " ",
-		strawmelonapple: "strawnerry, watermelon, and apple.",
+		strawmelonapple: "Strawberry, watermelon, and apple.",
 		strawmelonappleice: "Strawberry watermelon menthol.",
 		banana: "25% Toast, 25% Butter, 50% Banana.",
 		blueberry: "25% Toast, 25% Butter, 50% Blueberry Jam.",
@@ -252,6 +260,10 @@ let blurbs = {
 		grapefruit: " ",
 		greenapple: " ",
 		peach: " ",
+		lychee: " ",
+		mango: " ",
+		peach: " ",
+		watermelon: " ",
 	},
 	thehypecollection: {
 		america: "Red white and blue rocket pop.",
@@ -324,7 +336,13 @@ let blurbs = {
 		pacificsangha: "Strawberry milk.",
 	},
 	sadboy: {
-
+		punchberryblood: "Sour raspberry lemonade punch.",
+		punchberryice: "Sour raspberry lemonade punch, with menthol.",
+		rainbowblood: "Quote: 'Mixed exotic fruit.'",
+		rainbowice: "Mixed exotic fruit with menthol.",
+		strawberryblood: "Strawberry candy.",
+		strawberryice: "Strawberry candy with menthol.",
+		unicorntears: "THE Sadboy website calls it: 'universally the perfect fit for anyone’s flavor preference.'",
 	},
 	ripevapes: {
 
@@ -346,7 +364,8 @@ let blurbs = {
 		pineapple: " ",
 		seablueberry: " ",
 		seedlesswatermelon: "There actually are seeds, be careful.",
-		strawberrykiwiice: " ",
+		strawberrykiwiice: "Strawberry kiwi with menthol.",
+		strawberry: "Strawberry kiwi with menthol.",
 		tropicstrawberry: " ",
 	},
 

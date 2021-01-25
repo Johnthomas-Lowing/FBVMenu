@@ -78,6 +78,8 @@ document.getElementById("search").addEventListener("keyup", e => {
 	  terms = searchString.split(" ");
 	  if(terms == ""){
 	  	drawManufacturers(manufacturers);
+	  } if(terms == "all"){
+	  	drawJuice();
 	  } else {
 	  	drawJuice(terms);
 	  }
