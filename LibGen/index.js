@@ -1,67 +1,75 @@
-let forbidden = ["mg", "ml", "mL", "ML", "Ml", 
-	"**", 
-	"100 Menthol",
-	"eliquid", "eLiquid", "e-liquid", "e-Liquid", "E-Liquid", "E-liquid", "e-Liquid", "ELiquid", "Eliquid", "E Liquid", "Liquids",
-	"ejuice", "eJuice", "EJuice", "e-juice", "e-Juice", "E-juice", "E-Juice", "Ejuice", "Juice Co", "Vapor", "vapor",
-	"Nicotine", "nicotine", "Nic ", "nic ", "Salts", "salts", "Salt", "salt",];
+let forbidden = ["mg", "mG", "Mg", "MG", 
+	"ml", "mL", "ML", "Ml",
+	"Ice Series", "Fruit Series", "Juice Co", "OverLoaded", "Orchard", "Dripper series", "Original Series",
+	"eLiquids", "ELiquid", "E Liquid", "Eliquid",
+	"EJuice", "Ejuice", "eJuice",
+	"Nicotine", "nicotine", "Nic ", "nic ",];
 let producers = [
 	'Air Factory',
 	'Aqua',
+	'Barista Brew Co',
+	'California Grown',
 	'Choices',
 	'Cloud Nurdz',
 	'Coastal Clouds',
+	'Crisp',
+	'Cyber',
+	'Drex Drips',
+	'Element',
+	'Five Pawns',
 	'Fruitia',
+	'Fresh Pressed',
 	'Hi Drip',
 	'Jam Monster',
 	'Juice Head',
+	'Jux',
 	'Lemon Twist',
 	'Loyalty',
 	'Magic Vapor',
+	'Mamasan',
 	'Naked',
+	'Northwest Finest',
 	'OFE',
 	'One Up Vapor',
 	'PachaMama',
 	'PNW',
 	'Pod Juice',
+	'Racks',
 	'Reds',
-	'River Reserve',
 	'Ripe Vapes',
+	'River Reserve',
 	'Ruthless',
 	'Sadboy',
-	'Shijin',
+	'Shijin Vapor',
 	'SilverBack',
 	'Skwezed',
-	"Solace",
-	"SVRF",
+	'Solace',
+	'Stash Reprise',
+	'SVRF',
 	'The Hype Collection',
 	'Transistor',
+	'Twisted Tongue',
 	'Vapetasia',
-	
-	
+	'Vapor Vandals',
+	'Yogi'
 ];
-let csv = ["JUULpods 4 Pack 5% Virginia Tobacco","JUULpods 4 Pack 5% Classic Menthol","","River Reserve Nicotine Salts 30ml Tangie 25mg","River Reserve Nicotine Salts 30ml Lemon Drifter 25mg","Shijin Vapor Salt Nic 50mg Phoenix","Shijin Vapor Salt Nic 50mg Dragon","Shijin Vapor Salt Nic 50mg Tortoise Ice","Shijin Vapor Salt Nic 50mg Tortoise","Shijin Vapor Salt Nic 50mg Tiger","","","Glas Basix Salt 30ml 30mg Banana Cream Pie","Juice Head Salts 30ml Watermelon Lime 25mg","Juice Head Salts 30ml Watermelon Lime 50mg","Juice Head Salts 30ml Strawberry Kiwi 25mg","Juice Head Salts 30ml Strawberry Kiwi 50mg","Juice Head Salts 30ml Peach Pear 25mg","Glas Basix Salt 30ml 50mg Banana Cream Pie","Juice Head Salts 30ml Peach Pear 50mg","Skwezed Nic Salt 30ml Green Apple 50mg","Skwezed Nic Salt 30ml Mango 50mg","Skwezed Nic Salt 30ml Peach 25mg","Skwezed Nic Salt 30ml Peach 50mg","Skwezed Nic Salt 30ml Grapefruit 25mg","Skwezed Nic Salt 30ml Grapefruit 50mg","Juice Head Salts 30ml Blueberry Lemon 25mg","Juice Head Salts 30ml Blueberry Lemon 50mg","Cloud Nurdz Nic Salt 30ml Strawberry Lemon 25mg","Cloud Nurdz Nic Salt 30ml Peach Blue Razz 50mg","Cloud Nurdz Nic Salt 30ml Strawberry Lemon 50mg","River Reserve Nicotine Salts 30ml Saltwater Creek 25mg","River Reserve Nicotine Salts 30ml Saltwater Creek 40mg","Jam Monster Salts 30ml PB&Jam Strawberry 48mg","Jam Monster Salts 30ml PB&Jam Grape 24mg","Jam Monster Salts 30ml PB&Jam Grape 48mg","Jam Monster Salts 30ml Raspberry 24mg","Jam Monster Salts 30ml Raspberry 48mg","Jam Monster Salts 30ml Blackberry 24mg","Jam Monster Salts 30ml Blackberry 48mg","Jam Monster Salts 30ml Mangerine Guava 48mg","Shijin Vapor Salt Nic 24mg Dragon","Shijin Vapor Salt Nic 24mg Phoenix","Shijin Vapor Salt Nic 24mg Tiger","Shijin Vapor Salt Nic 24mg Tortoise","Shijin Vapor Salt Nic 24mg Tortoise On Ice","Jam Monster Salts 30ml Melon Colada 24mg","Jam Monster Salts 30ml Strawmelon Apple 24mg","Jam Monster Salts 30ml Vanilla Custard 24mg","Jam Monster Salts 30ml Blueberry Custard 24mg","Jam Monster Salts 30ml Melon Colada 48mg","Jam Monster Salts 30ml Strawmelon Apple 48mg","Jam Monster Salts 30ml Vanilla Custard 48mg","Jam Monster Salts 30ml Blueberry Custard 48mg","Jam Monster Salts 30ml Strawberry Custard 48mg","Skwezed Nic Salt 30ml Watermelon 25mg","Skwezed Nic Salt 30ml Watermelon 50mg","Solace Nic Salts 30ml Strawberry 36mg","Solace Nic Salts 30ml Strawberry 48mg","Solace Nic Salts 30ml Berry Bash 36mg","Solace Nic Salts 30ml Strawberry Kiwi Ice 36mg","Solace Nic Salts 30ml Pineapple 36mg","Solace Nic Salts 30ml Mint 36mg","Solace Nic Salts 30ml Dragonthol 36mg","Solace Nic Salts 30ml Seedless Watermelon 36mg","Solace Nic Salts 30ml Lemon Lime Fusion 36mg","Solace Nic Salts 30ml Bold Tobacco 36mg","Solace Nic Salts 30ml Blue Raspberry Lemonade Ice 36mg","Solace Nic Salts 30ml Berry Bash 48mg","Solace Nic Salts 30ml Strawberry Kiwi Ice 48mg","Solace Nic Salts 30ml Pineapple 48mg","Solace Nic Salts 30ml Lemon Lime Fusion 48mg","Solace Nic Salts 30ml Mint 48mg","Solace Nic Salts 30ml Dragonthol 48mg","Solace Nic Salts 30ml Seedless Watermelon 48mg","Solace Nic Salts 30ml Bold Tobacco 48mg","Solace Nic Salts 30ml Blue Raspberry Lemonade Ice 48mg","Juice Head Salts 30ml Guava Peach 25mg","Juice Head Salts 30ml Guava Peach 50mg"];
-
+let csv = prompt("Enter raw CSV").split(",");
 let products = []; 
 const library = document.getElementById('lib');
 
 var punctuation = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
+var digits = /[0-9]/g;
 
 
-function saltCheck(){
-	for(a = 0; a < csv.length; a++){
-		if(csv[a].includes("Salt")){
-			console.log("salts");
-		}
-	}
-}
+forbidden.push("Salts");forbidden.push("salts");forbidden.push("Salt");forbidden.push("salt");
+
 
 function remove(terms){
 	for(a = 0; a < csv.length; a++){
 		for(b = 0 ; b < terms.length; b++){
 			csv[a] = csv[a].replace(`${terms[b]}`, '');
 			csv[a] = csv[a].replace(punctuation, '');
-			csv[a] = csv[a].replace(/\s\s+/g, ' ');
-			csv[a] = csv[a].replace(/\d./,'', ' ');
+			csv[a] = csv[a].replace(digits, '');
 			csv[a] = csv[a].trim();
 		}
 	}

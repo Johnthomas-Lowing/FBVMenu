@@ -97,7 +97,7 @@ let blurbs = {
 		lsd: "Sweet and tart lemon hard candy.",
 		nazzo: "Grapefruit",
 	},
-	shijin: {
+	shijinvapor: {
 		tigersmilk: "Mangoes and peaches.",
 		tiger: "Peach mango slushy.",
 		tortoiseontherocks: "Green apple, blue raspberry, and crushed mint.",
@@ -146,8 +146,11 @@ let blurbs = {
 		watermelonapple: " ",
 		watermelonappleiced: "With menthol.",
 		peachbluerazz: " ",
+		peachbluerazziced: "With menthol.",
 		grapeapple: " ",
+		grapeappleiced: "With menthol.",
 		grapestrawberry: " ",
+		grapestrawberryiced: "With menthol.",
 		kiwimelon: " ",
 	},
 	fruitia: {
@@ -368,6 +371,54 @@ let blurbs = {
 		strawberry: "Strawberry kiwi with menthol.",
 		tropicstrawberry: " ",
 	},
+	fivepawns: {
+
+	},	
+	twistedtongue: {
+
+	},
+	cyber: {
+
+	},
+	northwestfinest: {
+
+	},
+	stashreprise: {
+
+	},
+	baristabrewco:{
+
+	},
+	crisp:{
+
+	},
+	element:{
+
+	},
+	jux:{
+
+	},
+	mamasan:{
+
+	},
+	racks:{
+
+	},
+	vaporvandals:{
+
+	},
+	yogi:{
+
+	},
+	californiagrown:{
+
+	},
+	drexdrips:{
+
+	},
+	freshpressed:{
+
+	}
 
 };
 
