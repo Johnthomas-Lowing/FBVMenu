@@ -14,10 +14,10 @@ function checkPage(){
 	}
 };
 function navbar() {
-  if (nav.className === "bar") {
+  if (nav.className === "navbar unselectable") {
     nav.className += " responsive";
   } else {
-    nav.className = "bar";
+    nav.className = "navbar";
 	}
 }
 function goBack() {
