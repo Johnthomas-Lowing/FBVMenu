@@ -6,7 +6,7 @@ let inventory = [
 {brand: "cloudnurdz", shelfName: "Peach Blue Razz", product: "peachbluerazz", blurb: " "},
 {brand: "cloudnurdz", shelfName: "Watermelon Apple", product: "watermelonapple", blurb: " "},
 {brand: "fivepawnsorchard", shelfName: " ", product: "logo", blurb: " "},
-{brand: "fivepawnsorchard", shelfName: "Berry Limeade", product: "berrylimeade", blurb: "undefined"},
+{brand: "fivepawnsorchard", shelfName: "Berry Limeade", product: "berrylimeade", blurb: `${blurbs["fivepawnsorchard"]["berrylimeade"]}`},
 {brand: "fivepawnsorchard", shelfName: "Mango Passion", product: "mangopassion", blurb: "undefined"},
 {brand: "fivepawnsorchard", shelfName: "Melon Mash", product: "melonmash", blurb: "undefined"},
 {brand: "fivepawnsorchard", shelfName: "Nana Berry", product: "nanaberry", blurb: "undefined"},
@@ -121,7 +121,7 @@ let saltInventory = [
 	
 
 {brand: "fivepawnsorchard", shelfName: " ", product: "logo", blurb: " "},
-{brand: "fivepawnsorchard", shelfName: "Berry Limeade", product: "berrylimeade", blurb: "undefined"},
+{brand: "fivepawnsorchard", shelfName: "Berry Limeade", product: "berrylimeade", blurb: `asdasd`},
 {brand: "fivepawnsorchard", shelfName: "Mango Passion", product: "mangopassion", blurb: "undefined"},
 {brand: "fivepawnsorchard", shelfName: "Melon Mash", product: "melonmash", blurb: "undefined"},
 {brand: "fivepawnsorchard", shelfName: "Nana Berry", product: "nanaberry", blurb: "undefined"},

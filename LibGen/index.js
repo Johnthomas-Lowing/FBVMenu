@@ -1,13 +1,15 @@
 let forbidden = ["mg", "mG", "Mg", "MG", 
-	"ml", "mL", "ML", "Ml",
+	"ml", "mL", "ML", "Ml", "High Nic Salts",
 	"Ice Series", "Fruit Series", "Juice Co", "OverLoaded", "Orchard", "Dripper series", "Original Series",
-	"eLiquids", "ELiquid", "E Liquid", "Eliquid",
+	"eLiquids", "ELiquid", "E Liquid", "Eliquid", "Liquids",
 	"EJuice", "Ejuice", "eJuice",
+	"Vapors",
 	"Nicotine", "nicotine", "Nic ", "nic ",];
 let producers = [
 	'Air Factory',
 	'Aqua',
 	'Barista Brew Co',
+	'Boss',
 	'California Grown',
 	'Choices',
 	'Cloud Nurdz',
@@ -16,10 +18,12 @@ let producers = [
 	'Cyber',
 	'Drex Drips',
 	'Element',
-	'Five Pawns',
+	'Five Pawns Orchard',
+	'Five Pawns Original Series',
 	'Fruitia',
 	'Fresh Pressed',
 	'Hi Drip',
+	'Humble',
 	'Jam Monster',
 	'Juice Head',
 	'Jux',
@@ -27,6 +31,7 @@ let producers = [
 	'Loyalty',
 	'Magic Vapor',
 	'Mamasan',
+	'Micro Brew',
 	'Naked',
 	'Northwest Finest',
 	'OFE',
@@ -36,6 +41,7 @@ let producers = [
 	'Pod Juice',
 	'Racks',
 	'Reds',
+	'Ruze Premium',
 	'Ripe Vapes',
 	'River Reserve',
 	'Ruthless',
@@ -110,7 +116,7 @@ function generate(){
 				products[b] = products[b].replace(/\s\s+/g, ' ');
 				let shelfName = products[b].trim();
 				let item = shelfName.toLowerCase().split(" ").join("");
-				libraryContents.push(`{brand: "${brand}", shelfName: "${shelfName}", product: "${item}", blurb: "${blurbs[brand][item]}"}, <br>`);
+				libraryContents.push(`{brand: "${brand}", shelfName: "${shelfName}", product: "${item}", blurb: ` + "`${blurbs["+`"${brand}"`+"]["+`"${item}"`+"]}`}, <br>");
 			}
 		}
 		

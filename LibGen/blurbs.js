@@ -371,7 +371,13 @@ let blurbs = {
 		strawberry: "Strawberry kiwi with menthol.",
 		tropicstrawberry: " ",
 	},
-	fivepawns: {
+	fivepawnsorchard: {
+		berrylimeade: "Raspberry, blueberry, blackberry, and a hint of lime.",
+		mangopassion: "Mango and passionfruit.",
+		melonmash: "Watermelon, honey melon, and cantaloupe.",
+		nanaberry: "Strawberry and banana.",
+		pineapplekiwi: "Pineapple and kiwi.",
+
 
 	},	
 	twistedtongue: {
@@ -418,7 +424,19 @@ let blurbs = {
 	},
 	freshpressed:{
 
-	}
+	},
+	humble:{
+
+	},
+	microbrew:{
+
+	},
+	boss:{
+		bossypants: "Acai, Blueberry and Pomegranate.",
+	},
+	ruzepremium:{
+
+	},
 
 };
 
