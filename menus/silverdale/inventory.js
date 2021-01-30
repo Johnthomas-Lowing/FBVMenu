@@ -1,9 +1,5 @@
+
 let inventory = [
-	
-	
-
-
-
 {brand: "airfactory", shelfName: " ", product: "logo", blurb: " "},
 {brand: "airfactory", shelfName: "Blue Razz", product: "bluerazz", blurb: `${blurbs["airfactory"]["bluerazz"]}`},
 {brand: "airfactory", shelfName: "Blue Razz Ice", product: "bluerazzice", blurb: `${blurbs["airfactory"]["bluerazzice"]}`},
@@ -143,50 +139,42 @@ let inventory = [
 {brand: "vapetasia", shelfName: "Milk of the Poppy", product: "milkofthepoppy", blurb: `${blurbs["vapetasia"]["milkofthepoppy"]}`},
 {brand: "vapetasia", shelfName: "Rainbow Road", product: "rainbowroad", blurb: `${blurbs["vapetasia"]["rainbowroad"]}`},
 {brand: "vapetasia", shelfName: "Strawberry Killer Kustard", product: "strawberrykillerkustard", blurb: `${blurbs["vapetasia"]["strawberrykillerkustard"]}`},
-
-
-
-
 ];
-
 let saltInventory = [
-	
-	
 {brand: "boss", shelfName: " ", product: "logo", blurb: " "},
-{brand: "boss", shelfName: "Bossy Pants", product: "bossypants", blurb: "undefined"},
-{brand: "boss", shelfName: "Poe", product: "poe", blurb: "undefined"},
+{brand: "boss", shelfName: "Bossy Pants", product: "bossypants", blurb: `${blurbs["boss"]["bossypants"]}`},
+{brand: "boss", shelfName: "Poe", product: "poe", blurb: `${blurbs["boss"]["poe"]}`},
 {brand: "humble", shelfName: " ", product: "logo", blurb: " "},
-{brand: "humble", shelfName: "Blue Raspberry Menthol", product: "blueraspberrymenthol", blurb: "undefined"},
-{brand: "humble", shelfName: "Strawberry Banana", product: "strawberrybanana", blurb: "undefined"},
+{brand: "humble", shelfName: "Blue Raspberry Menthol", product: "blueraspberrymenthol", blurb: `${blurbs["humble"]["blueraspberrymenthol"]}`},
+{brand: "humble", shelfName: "Strawberry Banana", product: "strawberrybanana", blurb: `${blurbs["humble"]["strawberrybanana"]}`},
 {brand: "juicehead", shelfName: " ", product: "logo", blurb: " "},
-{brand: "juicehead", shelfName: "Blueberry Lemon", product: "blueberrylemon", blurb: " "},
-{brand: "juicehead", shelfName: "Peach Pear", product: "peachpear", blurb: " "},
-{brand: "juicehead", shelfName: "Pineapple Grapefruit", product: "pineapplegrapefruit", blurb: " "},
-{brand: "juicehead", shelfName: "Strawberry Kiwi", product: "strawberrykiwi", blurb: " "},
-{brand: "juicehead", shelfName: "Watermelon Lime", product: "watermelonlime", blurb: " "},
+{brand: "juicehead", shelfName: "Blueberry Lemon", product: "blueberrylemon", blurb: `${blurbs["juicehead"]["blueberrylemon"]}`},
+{brand: "juicehead", shelfName: "Peach Pear", product: "peachpear", blurb: `${blurbs["juicehead"]["peachpear"]}`},
+{brand: "juicehead", shelfName: "Pineapple Grapefruit", product: "pineapplegrapefruit", blurb: `${blurbs["juicehead"]["pineapplegrapefruit"]}`},
+{brand: "juicehead", shelfName: "Strawberry Kiwi", product: "strawberrykiwi", blurb: `${blurbs["juicehead"]["strawberrykiwi"]}`},
+{brand: "juicehead", shelfName: "Watermelon Lime", product: "watermelonlime", blurb: `${blurbs["juicehead"]["watermelonlime"]}`},
 {brand: "pachamama", shelfName: " ", product: "logo", blurb: " "},
-{brand: "pachamama", shelfName: "Apple Tobacco", product: "appletobacco", blurb: "undefined"},
+{brand: "pachamama", shelfName: "Apple Tobacco", product: "appletobacco", blurb: `${blurbs["pachamama"]["appletobacco"]}`},
 {brand: "riverreserve", shelfName: " ", product: "logo", blurb: " "},
-{brand: "riverreserve", shelfName: "Royal Tobacco", product: "royaltobacco", blurb: "undefined"},
-{brand: "riverreserve", shelfName: "Summer Berry", product: "summerberry", blurb: "undefined"},
-{brand: "riverreserve", shelfName: "Tangie", product: "tangie", blurb: "undefined"},
-{brand: "riverreserve", shelfName: "water Creek", product: "watercreek", blurb: "undefined"},
+{brand: "riverreserve", shelfName: "Royal Tobacco", product: "royaltobacco", blurb: `${blurbs["riverreserve"]["royaltobacco"]}`},
+{brand: "riverreserve", shelfName: "Saltwater Creek", product: "saltwatercreek", blurb: `${blurbs["riverreserve"]["saltwatercreek"]}`},
+{brand: "riverreserve", shelfName: "Summer Berry", product: "summerberry", blurb: `${blurbs["riverreserve"]["summerberry"]}`},
+{brand: "riverreserve", shelfName: "Tangie", product: "tangie", blurb: `${blurbs["riverreserve"]["tangie"]}`},
 {brand: "sadboy", shelfName: " ", product: "logo", blurb: " "},
-{brand: "sadboy", shelfName: "Mango Blood", product: "mangoblood", blurb: "undefined"},
-{brand: "sadboy", shelfName: "Mango Ice", product: "mangoice", blurb: "undefined"},
+{brand: "sadboy", shelfName: "Mango Blood", product: "mangoblood", blurb: `${blurbs["sadboy"]["mangoblood"]}`},
+{brand: "sadboy", shelfName: "Mango Ice", product: "mangoice", blurb: `${blurbs["sadboy"]["mangoice"]}`},
 {brand: "solace", shelfName: " ", product: "logo", blurb: " "},
-{brand: "solace", shelfName: "Berry Bash", product: "berrybash", blurb: "Mixed berries."},
-{brand: "solace", shelfName: "Blue Raspberry Lemonade Ice", product: "blueraspberrylemonadeice", blurb: "undefined"},
-{brand: "solace", shelfName: "Blues Mango", product: "bluesmango", blurb: "Mango with a hint of... blue raspberry."},
-{brand: "solace", shelfName: "Juiced Apple", product: "juicedapple", blurb: " "},
-{brand: "solace", shelfName: "Mint", product: "mint", blurb: "undefined"},
-{brand: "solace", shelfName: "Sea Blueberry", product: "seablueberry", blurb: " "},
-{brand: "solace", shelfName: "Seedless Watermelon", product: "seedlesswatermelon", blurb: "There actually are seeds, be careful."},
-{brand: "solace", shelfName: "Strawberry Kiwi Ice", product: "strawberrykiwiice", blurb: "Strawberry kiwi with menthol."},
-{brand: "solace", shelfName: "Tropic Strawberry", product: "tropicstrawberry", blurb: " "},
-
-
+{brand: "solace", shelfName: "Berry Bash", product: "berrybash", blurb: `${blurbs["solace"]["berrybash"]}`},
+{brand: "solace", shelfName: "Blue Raspberry Lemonade Ice", product: "blueraspberrylemonadeice", blurb: `${blurbs["solace"]["blueraspberrylemonadeice"]}`},
+{brand: "solace", shelfName: "Blues Mango", product: "bluesmango", blurb: `${blurbs["solace"]["bluesmango"]}`},
+{brand: "solace", shelfName: "Juiced Apple", product: "juicedapple", blurb: `${blurbs["solace"]["juicedapple"]}`},
+{brand: "solace", shelfName: "Mint", product: "mint", blurb: `${blurbs["solace"]["mint"]}`},
+{brand: "solace", shelfName: "Sea Salt Blueberry", product: "seasaltblueberry", blurb: `${blurbs["solace"]["seasaltblueberry"]}`},
+{brand: "solace", shelfName: "Seedless Watermelon", product: "seedlesswatermelon", blurb: `${blurbs["solace"]["seedlesswatermelon"]}`},
+{brand: "solace", shelfName: "Strawberry Kiwi Ice", product: "strawberrykiwiice", blurb: `${blurbs["solace"]["strawberrykiwiice"]}`},
+{brand: "solace", shelfName: "Tropic Strawberry", product: "tropicstrawberry", blurb: `${blurbs["solace"]["tropicstrawberry"]}`},
 ];
+
 
 let combInv = inventory.concat(saltInventory);
 let logos = combInv.filter(a => {

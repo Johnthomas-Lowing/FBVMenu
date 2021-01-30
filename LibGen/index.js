@@ -1,20 +1,20 @@
 let forbidden = ["mg", "mG", "Mg", "MG", 
 	"ml", "mL", "ML", "Ml", "High Nic Salts",
-	"Ice Series", "Fruit Series", "Juice Co", "OverLoaded", "Orchard", "Dripper series", "Original Series",
+	"Ice Series", "Fruit Series", "Juice Co ", "OverLoaded", "Orchard", "Dripper series", "Original Series",
 	"eLiquids", "ELiquid", "E Liquid", "Eliquid", "Liquids",
 	"EJuice", "Ejuice", "eJuice",
 	"Vapors",
-	"Nicotine", "nicotine", "Nic ", "nic ",];
+	"Low Nic", "High Nic", "Nicotine", "nicotine", "Nic Salts", "nic salts", "Nic Salt", "nic salt", "Salt Nic", "salts", "Salts"];
 let producers = [
 	'Air Factory',
 	'Aqua',
 	'Barista Brew Co',
-	'Boss',
+	'Boss ',
 	'California Grown',
 	'Choices',
 	'Cloud Nurdz',
 	'Coastal Clouds',
-	'Crisp',
+	//'Crisp', //Gresham
 	'Cyber',
 	'Drex Drips',
 	'Element',
@@ -39,7 +39,7 @@ let producers = [
 	'PachaMama',
 	'PNW',
 	'Pod Juice',
-	'Racks',
+	//'Racks', //Gresham
 	'Reds',
 	'Ruze Premium',
 	'Ripe Vapes',
@@ -59,16 +59,15 @@ let producers = [
 	'Vapor Vandals',
 	'Yogi'
 ];
-let csv = prompt("Enter raw CSV").split(",");
+
+let rawcsv = [];
+
+let csv;
 let products = []; 
 const library = document.getElementById('lib');
 
 var punctuation = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
 var digits = /[0-9]/g;
-
-
-forbidden.push("Salts");forbidden.push("salts");forbidden.push("Salt");forbidden.push("salt");
-
 
 function remove(terms){
 	for(a = 0; a < csv.length; a++){
@@ -79,6 +78,7 @@ function remove(terms){
 			csv[a] = csv[a].trim();
 		}
 	}
+	consolidate();
 }
 
 function consolidate(){
@@ -93,6 +93,8 @@ let libraryContents = [];
 let currentProducers = [];
 
 function knownProducers(){
+	libraryContents = [];
+	currentProducers = [];
 	for(a = 0 ; a < products.length; a++){
 		for(b = 0; b < producers.length; b++){
 			if(products[a].includes(producers[b])){
@@ -119,14 +121,36 @@ function generate(){
 				libraryContents.push(`{brand: "${brand}", shelfName: "${shelfName}", product: "${item}", blurb: ` + "`${blurbs["+`"${brand}"`+"]["+`"${item}"`+"]}`}, <br>");
 			}
 		}
-		
+	}
+	for(a = 0; a < libraryContents.length; a++){
+		library.innerHTML += libraryContents[a];
 	}
 }
 
+let standardCSV = [];
+let saltCSV = [];
+function processRaw(){
+	for(a = 0; a < rawcsv.length; a+=12){
+		if(rawcsv[a+5].includes("**")!= true){
+			if(rawcsv[a+6].includes("Salt")){
+				if(rawcsv[a+5].includes("Low Nic")){
+					standardCSV.push(rawcsv[a+5]);
+				} else {
+					saltCSV.push(rawcsv[a+5]);
+				}
+			} else {
+				standardCSV.push(rawcsv[a+5]);
+			} 
+		}
+	}
+}
+processRaw();
+library.innerHTML += `let inventory = [<br>`;
+csv = standardCSV;
 remove(forbidden);
-consolidate();
 generate();
-for(a = 0; a < libraryContents.length; a++){
-	library.innerHTML += libraryContents[a];
-};
-console.log("Finished");
+library.innerHTML += "];<br>let saltInventory = [<br>";
+csv = saltCSV;
+remove(forbidden);
+generate();
+library.innerHTML += "];"
