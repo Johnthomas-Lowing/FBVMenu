@@ -85,7 +85,7 @@ let blurbs = {
 		amy: "Vanilla, caramel, and peanut butter brittle.",
 		harambe: "Cinnamon and cream liqueur.",
 	},
-	oneupvapor: {
+	oneup: {
 		orgasm: "Peach, guava, and watermelon.",
 		orgasmice: "Peach, guava, and watermelon with menthol.",
 	},
@@ -97,7 +97,7 @@ let blurbs = {
 		lsd: "Sweet and tart lemon hard candy.",
 		nazzo: "Grapefruit",
 	},
-	shijinvapor: {
+	shijin: {
 		tigersmilk: "Mangoes and peaches.",
 		tiger: "Peach mango slushy.",
 		tortoiseontherocks: "Green apple, blue raspberry, and crushed mint.",
