@@ -20,8 +20,15 @@ function navbar() {
     nav.className = "navbar";
 	}
 }
+function goTo(){
+	window.scrollTo(0, 0);
+}
+function all(){
+	container.innerHTML += `<div class="item unselectable"><img src="../../resources/all.webp" onclick="draw(' '); goTo();"></div>`;
+}
 function goBack() {
 	draw("logo");
+	all();
 	nav.removeChild(back);
 	document.getElementById("search").value = '';
 }
@@ -48,11 +55,11 @@ let block;
 function buildHTML(a, content){
 	block = `<div class="item unselectable">
 			<img src="../../resources/${juice}/${content[a].brand.toLowerCase()}_${content[a].product}.webp"
-			onclick="draw('${content[a].brand}'); drawBack();">`;
+			`;
 	if(content[a].product == "logo"){
-		block += `</div>`
+		block += `onclick="draw('${content[a].brand}'); drawBack();"></div>`
 	} else {
-		block +=`<h1>${content[a].shelfName}</h1>
+		block +=`><h1>${content[a].shelfName}</h1>
 				<p>${content[a].blurb}</p>
 				</div>`;
 	}
@@ -77,8 +84,10 @@ function listen(){
 		};
 	});
 };
+
 checkPage();
 draw("logo");
+all();
 listen();
 
 
