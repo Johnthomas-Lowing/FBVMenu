@@ -4,13 +4,31 @@ let nav = document.getElementById("nav");
 let length;
 let operatingInventory;
 let juice;
+let store;
 function checkPage(){
 	if(document.URL.includes("freebase")){
-		operatingInventory = inventory;
+		operatingInventory = 0;
 		juice = "freebase";
 	} else if(document.URL.includes("salt")){
-		operatingInventory = saltInventory;
+		operatingInventory = 1;
 		juice = "salts";
+	}
+	if(document.URL.includes("anchorage")){
+		store = anchorage;
+	} else if(document.URL.includes("battleground")){
+		store = battleground;
+	} else if(document.URL.includes("wasilla")){
+		store = wasilla;
+	} else if(document.URL.includes("fairbanks")){
+		store = fairbanks;
+	} else if(document.URL.includes("gresham")){
+		store = gresham;
+	} else if(document.URL.includes("hazeldell")){
+		store = hazeldell;
+	} else if(document.URL.includes("silverdale")){
+		store = silverdale;
+	} else if(document.URL.includes("vancouver")){
+		store = vancouver;
 	}
 };
 function navbar() {
@@ -43,7 +61,7 @@ function drawBack(){
 }
 let results;
 function filter(term){
-	results = operatingInventory.filter(f => {
+	results = store[operatingInventory].filter(f => {
 		return(f.brand.includes(term) ||
 		f.shelfName.includes(term) ||
 		f.product.includes(term) ||
