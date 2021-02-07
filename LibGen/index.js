@@ -111,7 +111,23 @@ function knownProducers(){
 	}
 }
 
-
+function nameByHand(item){
+	return item.replace("Menthol Brain Freeze", " Brain Freeze ");
+}
+let names = [
+{bad: "Menthol Brain Freeze", good: "Brain Freeze"},
+{bad: "Menthol Crisp Menthol", good: "Crisp Menthol"},
+{bad: "Menthol Polar Breeze", good: "Polar Breeze"},
+{bad: "Menthol Very Cool", good: "Very Cool"},
+{bad: "Really Berry Very Berry", good: "Really Berry"},
+{bad: "Green No Honeydew Melon Chew", good: "Honeydew Melon Chew"},
+{bad: "Pink Iced Pink Punch Lemonade", good: "Iced Pink Punch Lemonade"},
+{bad: "Crimson No Strawberry Mason", good: "Strawberry Mason"},
+{bad: "Purple No", good: "Purple No. 1"},
+{bad: "White No", good: "White No. 1"},
+{bad: "Rainbow No", good: "Rainbow No. 1"},
+//  {bad: "", good: ""},
+]
 function generate(){
 	knownProducers();
 	for(a = 0; a < currentProducers.length; a++){
@@ -121,6 +137,15 @@ function generate(){
 				let brand = currentProducers[a].toLowerCase().split(" ").join("");
 				products[b] = products[b].replace(`${currentProducers[a]}`, '');
 				products[b] = products[b].replace(/\s\s+/g, ' ');
+
+				//temporary i'm sorry
+				for(c = 0; c < names.length; c++){
+					if(products[b].includes(`${names[c].bad}`)){
+						nameByHand(products[b]);
+						products[b] = products[b].replace(`${names[c].bad}`, (`${names[c].good}`));
+					}
+				}
+
 				let shelfName = products[b].trim();
 				let item = shelfName.toLowerCase().split(" ").join("");
 				libraryContents.push(`{brand: "${brand}", shelfName: "${shelfName}", product: "${item}", blurb: ` + "`${blurbs["+`"${brand}"`+"]["+`"${item}"`+"]}`}, <br>");
@@ -132,10 +157,12 @@ function generate(){
 	}
 }
 
-function byHand(item){
+function itemByHand(item){
 	if(item.includes("River") && item.includes("Natural") || 
 	   item.includes("River") && item.includes("Wolf")){
 		return true;
+	} else {
+		return false;
 	}
 }
 
@@ -145,7 +172,7 @@ function processRaw(raw){
 	for(a = 0; a < raw.length; a+=12){
 		if(raw[a+5].includes("**")!= true){
 			if(raw[a+7] != "1"){
-				if(byHand(raw[a+5]) != true){
+				if(itemByHand(raw[a+5]) != true){
 					if(raw[a+6].includes("Salt")){
 						if(raw[a+5].includes("Low Nic")){
 							standardCSV.push(raw[a+5]);
