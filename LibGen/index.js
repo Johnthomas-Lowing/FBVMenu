@@ -111,9 +111,6 @@ function knownProducers(){
 	}
 }
 
-function nameByHand(item){
-	return item.replace("Menthol Brain Freeze", " Brain Freeze ");
-}
 let names = [
 {bad: "Menthol Brain Freeze", good: "Brain Freeze"},
 {bad: "Menthol Crisp Menthol", good: "Crisp Menthol"},
@@ -123,9 +120,9 @@ let names = [
 {bad: "Green No Honeydew Melon Chew", good: "Honeydew Melon Chew"},
 {bad: "Pink Iced Pink Punch Lemonade", good: "Iced Pink Punch Lemonade"},
 {bad: "Crimson No Strawberry Mason", good: "Strawberry Mason"},
-{bad: "Purple No", good: "Purple No. 1"},
-{bad: "White No", good: "White No. 1"},
-{bad: "Rainbow No", good: "Rainbow No. 1"},
+{bad: "Purple No", good: "Purple No 1"},
+{bad: "White No", good: "White No 1"},
+{bad: "Rainbow No", good: "Rainbow No 1"},
 //  {bad: "", good: ""},
 ]
 function generate(){
@@ -141,7 +138,6 @@ function generate(){
 				//temporary i'm sorry
 				for(c = 0; c < names.length; c++){
 					if(products[b].includes(`${names[c].bad}`)){
-						nameByHand(products[b]);
 						products[b] = products[b].replace(`${names[c].bad}`, (`${names[c].good}`));
 					}
 				}
@@ -157,9 +153,11 @@ function generate(){
 	}
 }
 
-function itemByHand(item){
+function itemByHand(item, category){
 	if(item.includes("River") && item.includes("Natural") || 
-	   item.includes("River") && item.includes("Wolf")){
+	   item.includes("River") && item.includes("Wolf") ||
+	   item.includes("One") && item.includes("Rainbow Spectrum") ||
+	   item.includes("River") && category.includes("Salt")){
 		return true;
 	} else {
 		return false;
@@ -172,7 +170,7 @@ function processRaw(raw){
 	for(a = 0; a < raw.length; a+=12){
 		if(raw[a+5].includes("**")!= true){
 			if(raw[a+7] != "1"){
-				if(itemByHand(raw[a+5]) != true){
+				if(itemByHand(raw[a+5], raw[a+6]) != true){
 					if(raw[a+6].includes("Salt")){
 						if(raw[a+5].includes("Low Nic")){
 							standardCSV.push(raw[a+5]);

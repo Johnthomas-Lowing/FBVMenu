@@ -42,7 +42,7 @@ let blurbs = {
 	naked: {
 		hawaiianpog: "Passion fruit, orange, and guava.",
 		lavaflow: "Strawberry, pineapple, and coconut.",
-		reallyberryveryberry: "Blue raspberry with a hint of lemon.",
+		reallyberry: "Blue raspberry with a hint of lemon.",
 		polarbreeze: "Honeydew, pineapple, and cantaloupe menthol.",
 		brainfreeze: "Strawberry pomegranate menthol.",
 		verycool: "Blue raspberry menthol.",
