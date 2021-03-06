@@ -35,7 +35,7 @@ function navbar() {
   if (nav.className === "navbar unselectable") {
     nav.className += " responsive";
   } else {
-    nav.className = "navbar";
+    nav.className = "navbar unselectable";
 	}
 }
 function goTo(){
