@@ -1,5 +1,4 @@
-let forbidden = ["mg", "mG", "Mg", "MG", 
-	"ml", "mL", "ML", "Ml", "High Nic Salts",
+let forbidden = ["High Nic Salts",
 	"Ice Series", "Fruit Series", "Juice Co ", "OverLoaded", "Orchard", "Dripper series", "Original Series",
 	"eLiquids", "ELiquid", "E Liquid", "Eliquid", "Liquids",
 	"EJuice", "Ejuice", "eJuice",
@@ -72,14 +71,14 @@ let saltCSV = [];
 const library = document.getElementById('lib');
 
 var punctuation = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
-var digits = /[0-9]/g;
+//var digits = /[0-9]/g;
 
 function remove(terms){
 	for(a = 0; a < csv.length; a++){
 		for(b = 0 ; b < terms.length; b++){
 			csv[a] = csv[a].replace(`${terms[b]}`, '');
 			csv[a] = csv[a].replace(punctuation, '');
-			csv[a] = csv[a].replace(digits, '');
+			//csv[a] = csv[a].replace(digits, '');
 			csv[a] = csv[a].trim();
 		}
 	}
@@ -198,6 +197,6 @@ function buildHTML(raw, store){
 	generate();
 	library.innerHTML += "] <br> ];<br>"
 }
-for(i = 0; i < list.length; i++){
-	buildHTML(csvs[i], list[i]);
+for(i = 0; i < storeList.length; i++){
+	buildHTML(csvs[i], storeList[i]);
 }

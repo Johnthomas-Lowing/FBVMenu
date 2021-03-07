@@ -26,4 +26,4 @@ let csvs = [
 
 */
 
-let list = ["anchorage", "battleground", "fairbanks", "gresham", "hazeldell", "silverdale", "vancouver", "wasilla"];
+let storeList = ["anchorage", "battleground", "fairbanks", "gresham", "hazeldell", "silverdale", "vancouver", "wasilla"];
