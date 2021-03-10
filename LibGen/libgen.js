@@ -107,12 +107,15 @@ let brands = [
 	'Yogi'
 ];
 let structure;
+let inventory;
 let library = document.getElementById("lib");
 
-function parse(data){
+function restructure(data){
 	//remove all data from our structure.
 	structure = [];
+	inventory = [];
 	//grab item, category, and remaining inventory value.
+	//starts after category toppers. (+12)
 	for(a = 12; a < data.length; a+=12){
 		//excluding any items marked ** for removal.
 		if(data[a+5].includes("**") != true){
@@ -133,17 +136,11 @@ function parse(data){
 				structure[a].item = structure[a].item.replace(`${badFlavors[b].bad}`, `${badFlavors[b].good}`);
 			}
 		}
-		//adds 'brand: value'
-		for(b = 0; b < brands.length; b++){
-			if(structure[a].item.includes(brands[b])){
-				structure[a].brand = brands[b];
-				structure[a].item = structure[a].item.replace(`${brands[b]}`, "");
-			}
-		}
 		//adds 'size: value'
 		for(b = 0; b < sizes.length; b++){
 			if(structure[a].item.includes(sizes[b])){
-				structure[a].size = sizes[b];
+				//hmm...
+				structure[a].size = new Array(sizes[b]);
 				structure[a].item = structure[a].item.replace(`${sizes[b]}`, "");
 			}
 		}
@@ -154,34 +151,34 @@ function parse(data){
 				structure[a].item = structure[a].item.replace(`${strength[b]}`, "");
 			}
 		}
-		structure[a].item = structure[a].item.trim();
-	}
-}
-
-let objectBrand;
-function buildHTML(csv, store){
-	parse(csv);
-	for(a = 0; a < structure.length; a++){
-		if(structure[a].brand != undefined){
-			objectBrand = structure[a].brand.toLowerCase().split(" ").join("");
-		} else {
-			objectBrand = " ";
+		//adds 'brand: value'
+		for(b = 0; b < brands.length; b++){
+			if(structure[a].item.includes(brands[b])){
+				structure[a].brand = brands[b];
+				structure[a].item = structure[a].item.replace(`${brands[b]}`, "");
+			}
 		}
-		library.innerHTML += "{brand: '" + objectBrand + "', " +
-		"shelfName: '" + structure[a].item + "', " +
-		"size: '" + structure[a].size + "', " +
-		"strength: '" + structure[a].strength + "', " +
-		"product: '" + structure[a].item.toLowerCase().split(" ").join("") + "', " +
-		"blurb: '" + "`${blurbs["+`"${structure[a].brand.toLowerCase().split(" ").join("")}"`+"]["+`"${structure[a].item.toLowerCase().split(" ").join("")}"`+"]}`}, <br>";
+		structure[a].item = structure[a].item.trim();
+		
+		if(inventory.length == 0){
+			inventory.push(structure[a]);
+		} else {
+			for(b = 0; b < inventory.length; b++){
+				if(inventory[b].item.includes(structure[a].item) != true){
+					inventory.push(structure[a]);
+				} else {
+					
+				}
+			}
+		}
+
 	}
-	library.innerHTML += "END of" + store;
 }
 
-for(a = 0; a < storeList.length; a++){
-	buildHTML(csvs[a], storeList[a]);
-}
 
-//this is all wrong
+restructure(csvs[0])
+
+
 //we want to build a new array full of unique inventory items
 //update entries with new information as its found
 //i.e. 30ml PNW Peaches 03mg -> adds Peaches to PNW, adds 30ml and 03mg to Peaches.
