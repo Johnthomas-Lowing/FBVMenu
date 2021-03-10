@@ -113,7 +113,8 @@ let brands = [
 
 let rawCSV = ["210000010373","810000431687","","","","PNW E-Liquid 30ml Arctic Tobacco 06mg","eLiquids / Standard","4","$24.44","$6.11","$13.00","53%","210000010374","810000431694","","","","PNW E-Liquid 30ml Arctic Tobacco 12mg","eLiquids / Standard","6","$36.66","$6.11","$13.00","53%","210000010380","810000432127","","","","PNW E-Liquid 30ml NW4 00mg","eLiquids / Standard","3","$18.33","$6.11","$13.00","53%"];
 
-let firstCut = [];
+let structure = [];
+
 
 function parse(data){
 	//grab item, category, and remaining inventory value.
@@ -121,41 +122,44 @@ function parse(data){
 		//excluding any items marked ** for removal.
 		if(data[a+5].includes("**") != true){
 			let entry = {item: `${data[a+5]}`, category: `${data[a+6]}`, remaining: `${data[a+7]}`}
-			firstCut.push(entry);
+			structure.push(entry);
 		}
 	}
-	for(a = 0; a < firstCut.length; a++){
+	for(a = 0; a < structure.length; a++){
 		//remove bad language
 		for(b = 0; b < badWords.length; b++){
-			if(firstCut[a].item.includes(badWords[b])){
-				firstCut[a].item = firstCut[a].item.replace(`${badWords[b]}`, "");
+			if(structure[a].item.includes(badWords[b])){
+				structure[a].item = structure[a].item.replace(`${badWords[b]}`, "");
 			}
 		}
 		//check for brands
 		for(b = 0; b < brands.length; b++){
-			if(firstCut[a].item.includes(brands[b])){
-				firstCut[a].brand = brands[b];
-				firstCut[a].item = firstCut[a].item.replace(`${brands[b]}`, "");
+			if(structure[a].item.includes(brands[b])){
+				structure[a].brand = brands[b];
+				structure[a].item = structure[a].item.replace(`${brands[b]}`, "");
 			}
 		}
 		//Check for size
 		for(b = 0; b < sizes.length; b++){
-			if(firstCut[a].item.includes(sizes[b])){
-				firstCut[a].size = sizes[b];
-				firstCut[a].item = firstCut[a].item.replace(`${sizes[b]}`, "");
+			if(structure[a].item.includes(sizes[b])){
+				structure[a].size = sizes[b];
+				structure[a].item = structure[a].item.replace(`${sizes[b]}`, "");
 			}
 		}
 		//Check for strength
 		for(b = 0; b < strength.length; b++){
-			if(firstCut[a].item.includes(strength[b])){
-				firstCut[a].strength = strength[b];
-				firstCut[a].item = firstCut[a].item.replace(`${strength[b]}`, "");
+			if(structure[a].item.includes(strength[b])){
+				structure[a].strength = strength[b];
+				structure[a].item = structure[a].item.replace(`${strength[b]}`, "");
 			}
 		}
-		firstCut[a].item = firstCut[a].item.trim();
+		structure[a].item = structure[a].item.trim();
 	}
 }
 
 
 parse(rawCSV);
-console.log(firstCut);
+console.log(structure);
+
+//example output
+//{brand: "cloudnurdz", shelfName: " ", product: "logo", blurb: " "},
