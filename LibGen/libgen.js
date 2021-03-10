@@ -1,5 +1,4 @@
-let library = document.getElementById("lib");
-let sizes = ['30ml', '60ml', '100ml', '120ml'];
+let sizes = ['30ml', '30mL', '60ml', '60mL', '100ml', '100mL', '120ml', '120mL', ];
 let strength = ['00mg', '03mg', '06mg', '12mg', '18mg'];
 let badWords = [
 	"High Nic Salts",
@@ -107,17 +106,14 @@ let brands = [
 	'Vapor Vandals',
 	'Yogi'
 ];
-
-let rawCSV = ["210000010373","810000431687","","","","PNW E-Liquid 30ml Menthol Brain Freeze 06mg","eLiquids / Standard","4","$24.44","$6.11","$13.00","53%","210000010374","810000431694","","","","PNW E-Liquid 30ml Arctic Tobacco 12mg","eLiquids / Standard","6","$36.66","$6.11","$13.00","53%","210000010380","810000432127","","","","PNW E-Liquid 30ml NW4 00mg","eLiquids / Standard","3","$18.33","$6.11","$13.00","53%"];
-
-let structure = [];
-
+let structure;
+let library = document.getElementById("lib");
 
 function parse(data){
 	//remove all data from our structure.
 	structure = [];
 	//grab item, category, and remaining inventory value.
-	for(a = 0; a < data.length; a+=12){
+	for(a = 12; a < data.length; a+=12){
 		//excluding any items marked ** for removal.
 		if(data[a+5].includes("**") != true){
 			let entry = {item: `${data[a+5]}`, category: `${data[a+6]}`, remaining: `${data[a+7]}`}
@@ -162,19 +158,34 @@ function parse(data){
 	}
 }
 
-
+let objectBrand;
 function buildHTML(csv, store){
-	parse(rawCSV);
+	parse(csv);
 	for(a = 0; a < structure.length; a++){
-		library.innerHTML += "{brand: '" + structure[a].brand.toLowerCase().split(" ").join("") + "', " +
+		if(structure[a].brand != undefined){
+			objectBrand = structure[a].brand.toLowerCase().split(" ").join("");
+		} else {
+			objectBrand = " ";
+		}
+		library.innerHTML += "{brand: '" + objectBrand + "', " +
 		"shelfName: '" + structure[a].item + "', " +
 		"size: '" + structure[a].size + "', " +
 		"strength: '" + structure[a].strength + "', " +
 		"product: '" + structure[a].item.toLowerCase().split(" ").join("") + "', " +
 		"blurb: '" + "`${blurbs["+`"${structure[a].brand.toLowerCase().split(" ").join("")}"`+"]["+`"${structure[a].item.toLowerCase().split(" ").join("")}"`+"]}`}, <br>";
 	}
+	library.innerHTML += "END of" + store;
 }
 
 for(a = 0; a < storeList.length; a++){
 	buildHTML(csvs[a], storeList[a]);
 }
+
+//this is all wrong
+//we want to build a new array full of unique inventory items
+//update entries with new information as its found
+//i.e. 30ml PNW Peaches 03mg -> adds Peaches to PNW, adds 30ml and 03mg to Peaches.
+//60ml PNW Peaches 06mg -> adds 60ml to peaches, adds 06mg to peaches.
+//at the very end, we can iterate through our inventory and paste it into a usable object
+//example structure:
+//{brand: "pnw", shelfName: "Cherry Limeade", product: "cherrylimeade", blurb: `${blurbs["pnw"]["cherrylimeade"]}`, strengths: "03"},
