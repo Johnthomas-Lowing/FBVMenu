@@ -111,7 +111,7 @@ let brands = [
 	'Yogi'
 ];
 
-let rawCSV = ["210000010373","810000431687","","","","PNW E-Liquid 30ml Arctic Tobacco 06mg","eLiquids / Standard","4","$24.44","$6.11","$13.00","53%","210000010374","810000431694","","","","PNW E-Liquid 30ml Arctic Tobacco 12mg","eLiquids / Standard","6","$36.66","$6.11","$13.00","53%","210000010380","810000432127","","","","PNW E-Liquid 30ml NW4 00mg","eLiquids / Standard","3","$18.33","$6.11","$13.00","53%"];
+let rawCSV = ["210000010373","810000431687","","","","PNW E-Liquid 30ml Menthol Brain Freeze 06mg","eLiquids / Standard","4","$24.44","$6.11","$13.00","53%","210000010374","810000431694","","","","PNW E-Liquid 30ml Arctic Tobacco 12mg","eLiquids / Standard","6","$36.66","$6.11","$13.00","53%","210000010380","810000432127","","","","PNW E-Liquid 30ml NW4 00mg","eLiquids / Standard","3","$18.33","$6.11","$13.00","53%"];
 
 let structure = [];
 
@@ -132,21 +132,27 @@ function parse(data){
 				structure[a].item = structure[a].item.replace(`${badWords[b]}`, "");
 			}
 		}
-		//check for brands
+		//fix some bad flavors by hand :<
+		for(b = 0; b < badFlavors.length; b++){
+			if(structure[a].item.includes(`${badFlavors[b].bad}`)){
+				structure[a].item = structure[a].item.replace(`${badFlavors[b].bad}`, `${badFlavors[b].good}`);
+			}
+		}
+		//adds 'brand: value'
 		for(b = 0; b < brands.length; b++){
 			if(structure[a].item.includes(brands[b])){
 				structure[a].brand = brands[b];
 				structure[a].item = structure[a].item.replace(`${brands[b]}`, "");
 			}
 		}
-		//Check for size
+		//adds 'size: value'
 		for(b = 0; b < sizes.length; b++){
 			if(structure[a].item.includes(sizes[b])){
 				structure[a].size = sizes[b];
 				structure[a].item = structure[a].item.replace(`${sizes[b]}`, "");
 			}
 		}
-		//Check for strength
+		//adds 'strength: value'
 		for(b = 0; b < strength.length; b++){
 			if(structure[a].item.includes(strength[b])){
 				structure[a].strength = strength[b];
@@ -160,6 +166,16 @@ function parse(data){
 
 parse(rawCSV);
 console.log(structure);
+let library = document.getElementById("lib");
+for(a = 0; a < structure.length; a++){
+	library.innerHTML += "{brand: '" + structure[a].brand.toLowerCase().split(" ").join("") + "', " +
+	"shelfName: '" + structure[a].item + "', " +
+	"size: '" + structure[a].size + "', " +
+	"strength: '" + structure[a].strength + "', " +
+	"product: '" + structure[a].item.toLowerCase().split(" ").join("") + "', " +
+	"blurb: '" + "`${blurbs["+`"${structure[a].brand.toLowerCase().split(" ").join("")}"`+"]["+`"${structure[a].item.toLowerCase().split(" ").join("")}"`+"]}`}, <br>";
+
+}
 
 //example output
-//{brand: "cloudnurdz", shelfName: " ", product: "logo", blurb: " "},
+//{brand: "cloudnurdz", shelfName: "Grape Strawberry", product: "grapestrawberry", blurb: ""},
