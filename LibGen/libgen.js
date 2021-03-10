@@ -1,7 +1,4 @@
-//TODO
-//Parse data, append relevent data to new array
-//Remove bad words
-//Identify brand, flavor, size, and strength.
+let library = document.getElementById("lib");
 let sizes = ['30ml', '60ml', '100ml', '120ml'];
 let strength = ['00mg', '03mg', '06mg', '12mg', '18mg'];
 let badWords = [
@@ -117,6 +114,8 @@ let structure = [];
 
 
 function parse(data){
+	//remove all data from our structure.
+	structure = [];
 	//grab item, category, and remaining inventory value.
 	for(a = 0; a < data.length; a+=12){
 		//excluding any items marked ** for removal.
@@ -164,18 +163,18 @@ function parse(data){
 }
 
 
-parse(rawCSV);
-console.log(structure);
-let library = document.getElementById("lib");
-for(a = 0; a < structure.length; a++){
-	library.innerHTML += "{brand: '" + structure[a].brand.toLowerCase().split(" ").join("") + "', " +
-	"shelfName: '" + structure[a].item + "', " +
-	"size: '" + structure[a].size + "', " +
-	"strength: '" + structure[a].strength + "', " +
-	"product: '" + structure[a].item.toLowerCase().split(" ").join("") + "', " +
-	"blurb: '" + "`${blurbs["+`"${structure[a].brand.toLowerCase().split(" ").join("")}"`+"]["+`"${structure[a].item.toLowerCase().split(" ").join("")}"`+"]}`}, <br>";
-
+function buildHTML(csv, store){
+	parse(rawCSV);
+	for(a = 0; a < structure.length; a++){
+		library.innerHTML += "{brand: '" + structure[a].brand.toLowerCase().split(" ").join("") + "', " +
+		"shelfName: '" + structure[a].item + "', " +
+		"size: '" + structure[a].size + "', " +
+		"strength: '" + structure[a].strength + "', " +
+		"product: '" + structure[a].item.toLowerCase().split(" ").join("") + "', " +
+		"blurb: '" + "`${blurbs["+`"${structure[a].brand.toLowerCase().split(" ").join("")}"`+"]["+`"${structure[a].item.toLowerCase().split(" ").join("")}"`+"]}`}, <br>";
+	}
 }
 
-//example output
-//{brand: "cloudnurdz", shelfName: "Grape Strawberry", product: "grapestrawberry", blurb: ""},
+for(a = 0; a < storeList.length; a++){
+	buildHTML(csvs[a], storeList[a]);
+}
