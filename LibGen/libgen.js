@@ -140,7 +140,7 @@ function restructure(data){
 		for(b = 0; b < sizes.length; b++){
 			if(structure[a].item.includes(sizes[b])){
 				//hmm...
-				structure[a].size = new Array(sizes[b]);
+				structure[a].size = [sizes[b]];
 				structure[a].item = structure[a].item.replace(`${sizes[b]}`, "");
 			}
 		}
@@ -160,17 +160,7 @@ function restructure(data){
 		}
 		structure[a].item = structure[a].item.trim();
 		
-		if(inventory.length == 0){
-			inventory.push(structure[a]);
-		} else {
-			for(b = 0; b < inventory.length; b++){
-				if(inventory[b].item.includes(structure[a].item) != true){
-					inventory.push(structure[a]);
-				} else {
-					
-				}
-			}
-		}
+		
 
 	}
 }
