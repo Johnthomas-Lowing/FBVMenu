@@ -136,10 +136,18 @@ function restructure(data){
 				structure[a].item = structure[a].item.replace(`${badFlavors[b].bad}`, `${badFlavors[b].good}`);
 			}
 		}
+		//adds 'brand: value'
+		for(b = 0; b < brands.length; b++){
+			if(structure[a].item.includes(brands[b])){
+				inventory[`${brands[b]}`] = []; 
+				structure[a].brand = brands[b];
+				structure[a].item = structure[a].item.replace(`${brands[b]}`, "");
+			}
+		}
 		//adds 'size: value'
 		for(b = 0; b < sizes.length; b++){
 			if(structure[a].item.includes(sizes[b])){
-				//hmm...
+				inventory[`${brands[b]}`]["sizes"] = "test";
 				structure[a].size = [sizes[b]];
 				structure[a].item = structure[a].item.replace(`${sizes[b]}`, "");
 			}
@@ -151,13 +159,7 @@ function restructure(data){
 				structure[a].item = structure[a].item.replace(`${strength[b]}`, "");
 			}
 		}
-		//adds 'brand: value'
-		for(b = 0; b < brands.length; b++){
-			if(structure[a].item.includes(brands[b])){
-				structure[a].brand = brands[b];
-				structure[a].item = structure[a].item.replace(`${brands[b]}`, "");
-			}
-		}
+		
 		structure[a].item = structure[a].item.trim();
 		
 		
