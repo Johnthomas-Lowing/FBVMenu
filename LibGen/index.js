@@ -3,7 +3,8 @@ let forbidden = ["High Nic Salts",
 	"eLiquids", "ELiquid", "E Liquid", "Eliquid", "Liquids",
 	"EJuice", "Ejuice", "eJuice",
 	"Vapors", "Vapor",
-	"Low Nic", "High Nic", "Nicotine", "nicotine", "Nic Salts", "nic salts", "Nic Salt", "nic salt", "Salt Nic", "salts", "Salts"];
+	"Low Nic", "High Nic", "Nicotine", "nicotine", "Nic Salts", "nic salts", "Nic Salt", "nic salt", "Salt Nic", "salts", "Salts",
+	"ml" , "mL", "ML", "Ml", "mg", "mG", "MG", "Mg"];
 let producers = [
 	'Air Factory',
 	'Aqua',
@@ -71,14 +72,14 @@ let saltCSV = [];
 const library = document.getElementById('lib');
 
 var punctuation = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
-//var digits = /[0-9]/g;
+var digits = /[0-9]/g;
 
 function remove(terms){
 	for(a = 0; a < csv.length; a++){
 		for(b = 0 ; b < terms.length; b++){
 			csv[a] = csv[a].replace(`${terms[b]}`, '');
 			csv[a] = csv[a].replace(punctuation, '');
-			//csv[a] = csv[a].replace(digits, '');
+			csv[a] = csv[a].replace(digits, '');
 			csv[a] = csv[a].trim();
 		}
 	}
