@@ -1,5 +1,5 @@
 let sizes = ['30ml', '30mL', '60ml', '60mL', '100ml', '100mL', '120ml', '120mL', ];
-let strength = ['00mg', '03mg', '06mg', '12mg', '18mg'];
+let strength = ['00mg', '03mg', "3mg", '06mg', "6mg", '12mg', '18mg', '20mg', '24mg', "25mg", '28mg', '30mg', '35mg', '36mg', '40mg', '48mg', '50mg', '55mg'];
 let badWords = [
 	"High Nic Salts",
 	"Low Nic",
@@ -25,6 +25,7 @@ let badWords = [
 	"E-Liquid",
 	"Eliquid",
 	"Liquids",
+	"E-Juice",
 	"EJuice",
 	"Ejuice",
 	"eJuice",
@@ -47,6 +48,7 @@ let badFlavors = [
 	{bad: "Purple No", good: "Purple No 1"},
 	{bad: "White No", good: "White No 1"},
 	{bad: "Rainbow No", good: "Rainbow No 1"},
+	{bad: "Fruit Twist", good: "Lemon Twist"},
 //  {bad: "", good: ""},
 ];
 //These must be added by hand currently.
@@ -65,6 +67,7 @@ let brands = [
 	'Element',
 	'Five Pawns Orchard',
 	'Five Pawns Original Series',
+	'Five Pawns',
 	'Fruitia',
 	'Fresh Pressed',
 	'Hi Drip',
@@ -99,6 +102,7 @@ let brands = [
 	'Solace',
 	'Stash Reprise',
 	'SVRF',
+	'Saucy',
 	'The Hype Collection',
 	'Transistor',
 	'Twisted Tongue',
@@ -147,7 +151,6 @@ function restructure(data){
 		//adds 'size: value'
 		for(b = 0; b < sizes.length; b++){
 			if(structure[a].item.includes(sizes[b])){
-				inventory[`${brands[b]}`]["sizes"] = "test";
 				structure[a].size = [sizes[b]];
 				structure[a].item = structure[a].item.replace(`${sizes[b]}`, "");
 			}
@@ -155,20 +158,43 @@ function restructure(data){
 		//adds 'strength: value'
 		for(b = 0; b < strength.length; b++){
 			if(structure[a].item.includes(strength[b])){
-				structure[a].strength = strength[b];
+				structure[a].strength = strength[b].toLowerCase();
 				structure[a].item = structure[a].item.replace(`${strength[b]}`, "");
 			}
 		}
 		
 		structure[a].item = structure[a].item.trim();
-		
-		
 
 	}
 }
 
+function build(content){
+	content.forEach(e => {
+		try {
+			if(inventory[e.brand].includes(e.item) != true){
+				inventory[e.brand][e.item] = {sizes:[], strengths:[]};
+			}
+		} catch {
+			console.log(`Failed to push "${e.item}"`);
+		}
+	});
+}
+
+function sands(content){
+	content.forEach(e => {
+		if (inventory[e.brand][e.item]["sizes"].includes(e.size) != true){
+			inventory[e.brand][e.item]["sizes"].push(e.size);
+		}
+		if (inventory[e.brand][e.item]["strengths"].includes(e.strength) != true){
+			inventory[e.brand][e.item]["strengths"].push(e.strength);
+		}
+	})
+}
+
 
 restructure(csvs[0])
+build(structure);
+sands(structure);
 
 
 //we want to build a new array full of unique inventory items
