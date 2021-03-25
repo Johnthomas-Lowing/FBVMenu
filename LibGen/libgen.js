@@ -1,5 +1,5 @@
 let sizes = ['30ml', '30mL', '60ml', '60mL', '100ml', '100mL', '120ml', '120mL', ];
-let strength = ['00mg', '03mg', "3mg", '06mg', "6mg", '12mg', '18mg', '20mg', '24mg', "25mg", '28mg', '30mg', '35mg', '36mg', '40mg', '48mg', '50mg', '55mg'];
+let strength = ['00mg', '03mg', '06mg', '12mg', '18mg', '20mg', '24mg', "25mg", '28mg', '30mg', '35mg', '36mg', '40mg', '48mg', '50mg', '55mg'];
 let badWords = [
 	"High Nic Salts",
 	"Low Nic",
@@ -110,8 +110,9 @@ let brands = [
 	'Vapor Vandals',
 	'Yogi'
 ];
+let failed = [];
 let structure;
-let inventory;
+let inventory = [];
 let library = document.getElementById("lib");
 
 function restructure(data){
@@ -151,7 +152,7 @@ function restructure(data){
 		//adds 'size: value'
 		for(b = 0; b < sizes.length; b++){
 			if(structure[a].item.includes(sizes[b])){
-				structure[a].size = [sizes[b]];
+				structure[a].size = sizes[b].toLowerCase();
 				structure[a].item = structure[a].item.replace(`${sizes[b]}`, "");
 			}
 		}
@@ -168,33 +169,40 @@ function restructure(data){
 	}
 }
 
-function build(content){
+function format(content){
 	content.forEach(e => {
 		try {
 			if(inventory[e.brand].includes(e.item) != true){
 				inventory[e.brand][e.item] = {sizes:[], strengths:[]};
 			}
 		} catch {
-			console.log(`Failed to push "${e.item}"`);
+			failed.push(e.item);
+		}
+	});
+	content.forEach(e => {
+		try {
+			if (inventory[e.brand][e.item]["sizes"].includes(e.size) != true){
+				inventory[e.brand][e.item]["sizes"].push(e.size);
+			}
+			if (inventory[e.brand][e.item]["strengths"].includes(e.strength) != true){
+				inventory[e.brand][e.item]["strengths"].push(e.strength);
+			}
+		} catch {
+			failed.push(e.item);
 		}
 	});
 }
 
-function sands(content){
+function build(content){
 	content.forEach(e => {
-		if (inventory[e.brand][e.item]["sizes"].includes(e.size) != true){
-			inventory[e.brand][e.item]["sizes"].push(e.size);
-		}
-		if (inventory[e.brand][e.item]["strengths"].includes(e.strength) != true){
-			inventory[e.brand][e.item]["strengths"].push(e.strength);
-		}
-	})
+		console.log(inventory[e])
+	});
 }
 
 
-restructure(csvs[0])
-build(structure);
-sands(structure);
+restructure(csvs[1])
+format(structure);
+build(brands);
 
 
 //we want to build a new array full of unique inventory items
