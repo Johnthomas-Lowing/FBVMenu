@@ -172,8 +172,8 @@ function restructure(data){
 function format(content){
 	content.forEach(e => {
 		try {
-			if(inventory[e.brand].includes(e.item) != true){
-				inventory[e.brand][e.item] = {sizes:[], strengths:[]};
+			if(inventory[e.brand].find(x => x = e.item) != true){
+				inventory[e.brand].push({item: e.item, sizes: [], strengths: []});
 			}
 		} catch {
 			failed.push(e.item);
@@ -191,7 +191,23 @@ function format(content){
 			failed.push(e.item);
 		}
 	});
+	// for(a = 0; a < content.length; a++){
+	// 	try{
+	// 		if (inventory[a].brand)
+	// 	}
+	// }
 }
+
+// function format(content){
+// 	content.forEach(e => {
+// 		try {
+
+
+// 		} catch {
+// 			console.log("Failed");
+// 		}
+// 	});
+// }
 
 function build(content){
 	content.forEach(e => {
@@ -200,9 +216,10 @@ function build(content){
 }
 
 
+//{flavor: "Peaches", strengths: ["x", "y"], size: }
+
 restructure(csvs[1])
 format(structure);
-build(brands);
 
 
 //we want to build a new array full of unique inventory items
