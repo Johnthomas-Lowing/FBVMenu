@@ -44,9 +44,8 @@ let badFlavors = [
 	{bad: "Menthol Very Cool", good: "Very Cool"},
 	{bad: "Really Berry Very Berry", good: "Really Berry"},
 	//most twist flavors have old + new in their name, and i just want one of those. So for now, we have to tell them how to be.
-	//I also just
-	{bad: "Green No Honeydew Melon Chew", good: "Honeydew Melon Chew"},
 	{bad: "Fruit Twist", good: "Lemon Twist"},
+	{bad: "Green No Honeydew Melon Chew", good: "Honeydew Melon Chew"},
 	{bad: "Pink Iced Pink Punch Lemonade", good: "Iced Pink Punch Lemonade"},
 	{bad: "Crimson No Strawberry Mason", good: "Strawberry Mason"},
 	{bad: "Purple No", good: "Purple No 1"},
@@ -54,6 +53,7 @@ let badFlavors = [
 	{bad: "Rainbow No", good: "Rainbow No 1"},
 	{bad: "Pink No Pink Punch", good: "Pink No 1"},
 	{bad: "Space No", good: "Space No 1"},
+	{bad: "Chilled Remix Chilled Melon Remix", good: "Chilled Melon Remix"},
 	{bad: "Wild Red Wild Watermelon", good: "Wild Watermelon"},
 //  {bad: "", good: ""},
 ];
