@@ -37,18 +37,24 @@ let forbidden = [
 ];
 //These must be added by hand currently.
 let badFlavors = [
+	//some weird naked naming conventions
 	{bad: "Menthol Brain Freeze", good: "Brain Freeze"},
 	{bad: "Menthol Crisp Menthol", good: "Crisp Menthol"},
 	{bad: "Menthol Polar Breeze", good: "Polar Breeze"},
 	{bad: "Menthol Very Cool", good: "Very Cool"},
 	{bad: "Really Berry Very Berry", good: "Really Berry"},
+	//most twist flavors have old + new in their name, and i just want one of those. So for now, we have to tell them how to be.
+	//I also just
 	{bad: "Green No Honeydew Melon Chew", good: "Honeydew Melon Chew"},
+	{bad: "Fruit Twist", good: "Lemon Twist"},
 	{bad: "Pink Iced Pink Punch Lemonade", good: "Iced Pink Punch Lemonade"},
 	{bad: "Crimson No Strawberry Mason", good: "Strawberry Mason"},
 	{bad: "Purple No", good: "Purple No 1"},
 	{bad: "White No", good: "White No 1"},
 	{bad: "Rainbow No", good: "Rainbow No 1"},
-	{bad: "Fruit Twist", good: "Lemon Twist"},
+	{bad: "Pink No Pink Punch", good: "Pink No 1"},
+	{bad: "Space No", good: "Space No 1"},
+	{bad: "Wild Red Wild Watermelon", good: "Wild Watermelon"},
 //  {bad: "", good: ""},
 ];
 //These must be added by hand currently.

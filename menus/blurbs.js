@@ -147,6 +147,8 @@ let blurbs = {
 		watermelonappleiced: "With menthol.",
 		peachbluerazz: " ",
 		peachbluerazziced: "With menthol.",
+		blueraspberrylemon: " ",
+		blueraspberrylemoniced: "With menthol.",
 		grapeapple: " ",
 		grapeappleiced: "With menthol.",
 		grapestrawberry: " ",
@@ -346,6 +348,11 @@ let blurbs = {
 		strawberryblood: "Strawberry candy.",
 		strawberryice: "Strawberry candy with menthol.",
 		unicorntears: "THE Sadboy website calls it: 'universally the perfect fit for anyone’s flavor preference.'",
+		berrynola: "Blueberry granola bar.",
+		strawnola: "Strawberry granola bar.",
+		buttercookie: "Sugar cookies with a hint of butter.",
+		keylimecookie: "Sugar cookies with key lime.",
+		shamrockcookie: "Delicious shamrock mint cookies.",
 	},
 	ripevapes: {
 
