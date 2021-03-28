@@ -55,6 +55,7 @@ let badFlavors = [
 	{bad: "Space No", good: "Space No 1"},
 	{bad: "Chilled Remix Chilled Melon Remix", good: "Chilled Melon Remix"},
 	{bad: "Wild Red Wild Watermelon", good: "Wild Watermelon"},
+	{bad: "Chilled Apple Peach", good: "Chilled Apple Pear"},
 //  {bad: "", good: ""},
 ];
 //These must be added by hand currently.
