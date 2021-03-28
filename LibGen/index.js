@@ -1,6 +1,6 @@
 let forbidden = ["High Nic Salts",
 	"Ice Series", "Fruit Series", "Juice Co ", "OverLoaded", "Orchard", "Dripper series", "Original Series",
-	"eLiquids", "ELiquid", "E Liquid", "Eliquid", "Liquids",
+	"eLiquids", "ELiquid", "E Liquid", "Eliquid", "Liquids", "eLiquid",
 	"EJuice", "Ejuice", "eJuice",
 	"Vapors", "Vapor",
 	"Low Nic", "High Nic", "Nicotine", "nicotine", "Nic Salts", "nic salts", "Nic Salt", "nic salt", "Salt Nic", "salts", "Salts",
