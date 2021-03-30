@@ -1,4 +1,4 @@
-let forbidden = ["High Nic Salts",
+ let forbidden = ["High Nic Salts",
 	"Ice Series", "Fruit Series", "Juice Co ", "OverLoaded", "Orchard", "Dripper series", "Original Series",
 	"eLiquids", "ELiquid", "E Liquid", "Eliquid", "Liquids", "eLiquid",
 	"EJuice", "Ejuice", "eJuice",
@@ -129,6 +129,8 @@ let names = [
 {bad: "Space No", good: "Space No 1"},
 {bad: "Chilled Remix Chilled Melon Remix", good: "Chilled Melon Remix"},
 {bad: "Wild Red Wild Watermelon", good: "Wild Watermelon"},
+
+{bad: "Chilled Apple Peach", good: "Chilled Apple Pear"},
 //  {bad: "", good: ""},
 ]
 function generate(){
