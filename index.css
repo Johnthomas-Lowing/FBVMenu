@@ -4,6 +4,10 @@ html {
   font-weight: 300;
   padding-bottom: 6em;
 }
+@font-face{
+  font-family:'Birley';
+  src: url(assets/fonts/birley.ttf);
+}
 
 .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
   position: relative;
