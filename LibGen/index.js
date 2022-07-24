@@ -1,65 +1,12 @@
  let forbidden = ["High Nic Salts",
-	"Ice Series", "Fruit Series", "Juice Co ", "OverLoaded", "Orchard", "Dripper series", "Original Series",
+	"Ice Series", "Fruit Series", "Juice Co", "OverLoaded", "Orchard", "Dripper series", "Original Series",
 	"eLiquids", "ELiquid", "E Liquid", "Eliquid", "Liquids", "eLiquid",
 	"EJuice", "Ejuice", "eJuice",
 	"Vapors", "Vapor",
 	"Low Nic", "High Nic", "Nicotine", "nicotine", "Nic Salts", "nic salts", "Nic Salt", "nic salt", "Salt Nic", "salts", "Salts",
 	"ml" , "mL", "ML", "Ml", "mg", "mG", "MG", "Mg"];
 let producers = [
-	'Air Factory',
-	'Aqua',
-	'Barista Brew Co',
-	'Boss ',
-	'California Grown',
-	'Choices',
-	'Cloud Nurdz',
-	'Coastal Clouds',
-	//'Crisp', //Gresham
-	'Cyber',
-	'Drex Drips',
-	'Element',
-	'Five Pawns Orchard',
-	'Five Pawns Original Series',
-	'Fruitia',
-	'Fresh Pressed',
-	'Hi Drip',
-	'Humble',
-	'Jam Monster',
-	'Juice Head',
-	'Jux',
-	'Lemon Twist',
-	'Loyalty',
-	'Magic Vapor',
-	'Mamasan',
-	'Micro Brew',
-	'Naked',
-	'Northwest Finest',
-	'OFE',
-	'One Up Vapor',
-	'One Up',
-	'PachaMama',
-	'PNW',
-	'Pod Juice',
-	//'Racks', //Gresham
-	'Reds',
-	'Ruze Premium',
-	'Ripe Vapes',
-	'River Reserve',
-	'Ruthless',
-	'Sadboy',
-	'Shijin Vapor',
-	'Shijin',
-	'SilverBack',
-	'Skwezed',
-	'Solace',
-	'Stash Reprise',
-	'SVRF',
-	'The Hype Collection',
-	'Transistor',
-	'Twisted Tongue',
-	'Vapetasia',
-	'Vapor Vandals',
-	'Yogi'
+	"Air Factory","Aqua","Bad Drip","Barista Brew","Bear Naked","Binaries Cabin","Boss ","Cali Grown","California Grown","Candy King","Choices","Cloud Nurdz","Coastal Clouds","Cyber","Drex Drips","Dripmore","Element","Five Pawns Orchard | Fruit", "Five Pawns Orchard | Ice", "Five Pawns Orchard | Original", "Flum","Fresh Farms","Fresh Pressed","Frost Factory","Fruitia","Glas","Hi Drip", "InneVape", "Humble","Hyde","Jam Monster","Fruit Monster","Ice Monster","Pod Juice","Juice Head","Juice Roll","Jux","Loyalty","Magic Vapor","Mamasan","Micro Brew","Naked","Nasty","Nic River","Northwest Finest","OFE","One Up","Orgnx","PNW","PachaMama","Pod Flo","Pod Juice","Propaganda","Reds","Ripe Vapes","Ripe","River Reserve X Series","River Reserve X Series | PNW", "Ruthless","Ruze Premium","Ruze Vapor","SVRF","SWFT","Sadboy","Saucy","Savage","Shijin","SilverBack","Skwezed","Slaps","Solace","Stash Reprise","Suicide Bunny","The Hype Collection","Transistor", "Twist", "Twisted Tongue","Vapetasia","Vapor Vandals","Vaporlax","Yogi","Zephyr Vapors"
 ];
 
 let rawcsv;
@@ -75,21 +22,21 @@ var punctuation = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
 var digits = /[0-9]/g;
 
 function remove(terms){
-	for(a = 0; a < csv.length; a++){
-		for(b = 0 ; b < terms.length; b++){
-			csv[a] = csv[a].replace(`${terms[b]}`, '');
+	for(a = 0; a < csv.length; a++){ //moving through a fixed length of whatever CSV is
+		for(b = 0 ; b < terms.length; b++){ //moving through a smart length of terms
+			csv[a] = csv[a].replace(`${terms[b]}`, ''); //but it only ever actually passes 'forbidden'
 			csv[a] = csv[a].replace(punctuation, '');
 			csv[a] = csv[a].replace(digits, '');
 			csv[a] = csv[a].trim();
 		}
 	}
-	consolidate();
+	consolidate(); //see below
 }
 
 function consolidate(){
 	for(a = 0; a < csv.length; a++){
-		if(products.includes(csv[a]) != true){
-			products.push(csv[a]);
+		if(products.includes(csv[a]) != true){ //the above modifcations to the array were affecting the actual csv. This leaves 2x 3x of every flavor for each strength.
+			products.push(csv[a]); //just add what's not there. 'products' becomes our new shelf.
 		}
 	}
 	products = products.sort();
@@ -104,7 +51,7 @@ function knownProducers(){
 		for(b = 0; b < producers.length; b++){
 			if(products[a].includes(producers[b])){
 				if(currentProducers.includes(producers[b]) != true){
-					currentProducers.push(producers[b]);
+					currentProducers.push(producers[b]); // we only want to work with producers that are present in the data. We don't want to include flavors from other shops.
 				}
 			}
 		}
@@ -117,7 +64,7 @@ let names = [
 {bad: "Menthol Polar Breeze", good: "Polar Breeze"},
 {bad: "Menthol Very Cool", good: "Very Cool"},
 {bad: "Really Berry Very Berry", good: "Really Berry"},
-//most twist flavors have old + new in their name, and i just want one of those. So for now, we have to tell them how to be.
+//I can now tell flavors how to be. This is done by hand inside vend now. Not any better of a solution. Just also not programatic at all.
 {bad: "Fruit Twist", good: "Lemon Twist"},
 {bad: "Green No Honeydew Melon Chew", good: "Honeydew Melon Chew"},
 {bad: "Pink Iced Pink Punch Lemonade", good: "Iced Pink Punch Lemonade"},
@@ -129,8 +76,7 @@ let names = [
 {bad: "Space No", good: "Space No 1"},
 {bad: "Chilled Remix Chilled Melon Remix", good: "Chilled Melon Remix"},
 {bad: "Wild Red Wild Watermelon", good: "Wild Watermelon"},
-
-{bad: "Chilled Apple Peach", good: "Chilled Apple Pear"},
+{bad: "Chilled Apple Peach", good: "Chilled Apple Pear"}
 //  {bad: "", good: ""},
 ]
 function generate(){
@@ -175,18 +121,18 @@ function itemByHand(item, category){
 function processRaw(raw){
 	standardCSV = [];
 	saltCSV = [];
-	for(a = 0; a < raw.length; a+=12){
+	for(a = 29; a < raw.length; a+=29){
 		if(raw[a+5].includes("**")!= true){
 			if(raw[a+7] != "1"){
 				if(itemByHand(raw[a+5], raw[a+6]) != true){
 					if(raw[a+6].includes("Salt")){
 						if(raw[a+5].includes("Low Nic")){
-							standardCSV.push(raw[a+5]);
+							standardCSV.push(`${raw[a+6]} ${raw[a+10]} ${raw[a+12]}`);
 						} else {
-							saltCSV.push(raw[a+5]);
+							saltCSV.push(`${raw[a+6]} ${raw[a+10]} ${raw[a+12]}`);
 						}
 					} else {
-						standardCSV.push(raw[a+5]);
+						standardCSV.push(`${raw[a+6]} ${raw[a+10]} ${raw[a+12]}`);
 					} 
 				}
 			}

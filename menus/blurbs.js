@@ -1,4 +1,44 @@
 let blurbs = {
+	riverreservexseries: {
+		bandit: "Tobacco with blackberry custard.",
+		blackberrywafflecone: "Blackberry topping on a scoop of vanilla ice cream, all atop a vanilla waffle cone.",
+		boldtobacco: " ",
+		mildtobacco: " ",
+		naturaltobacco: " ",
+		northwest: "Vanilla, hazelnut, tobacco.",
+		drifter: "Whipped cream with blueberries.",
+		drifterx: "Whipped cream with blackberries.",
+		blueislandpunch: "Blue raspberry fruit punch.",
+		caramelcove: "Caramel, hazelnut, and marshmallows.",
+		clearwatercreek: "Nothin! Just VG, PG, and nicotine.",
+		castaway: "Coconut, watermelon, and mango.",
+		eddy: "Mango pomegranate lemonade.",
+		islandpunch: "Fruit punch!",
+		greatwall: "Graham crackers and caramel adorned with shaved almonds, Kentucky bourbon and a splash of coconut cream.",
+		lemondrifter: "Whipped cream with tart lemon.",
+		midorisour: "Honeydew, lemonlime, and cherry.",
+		peachmangolemonade: " ",
+		pineapplegrapementhol: " ",
+		pbg: "Peanut butter, banana, graham cracker.",
+		raspberrylemonitalianice: "Raspberry and lemon.",
+		rivercolada: "Pineapple coconut rum.",
+		strawnanadrifter: "Whipped cream with strawberry and banana.",
+		swampmama: "Strawberries mixed with sweet vanilla custard.",
+		strawberrywafflecone: "Strawberry topping on a scoop of vanilla ice cream, all atop a vanilla waffle cone.",
+		strawberrybandit: "Strawberry custard and tobacco.",
+		strawberrydrifter: "Whipped cream with strawberries.",
+		tigersblood: "Strawberry and coconut.",
+		vanillabandit: "Tobacco with vanilla custard.",
+		vanillagraham: "Vanilla graham cracker with a brown sugar dusting.",
+		vanillawafflecone: "A scoop of vanilla ice cream atop a vanilla waffle cone.",
+		watermelonpunchmenthol: "Watermelon fruit punch with menthol.",
+		wiki: "Watermelon and kiwi.",
+		sweetcreambutterscotch: " ",
+		caramelappledrifter: "Caramel apple custard.",
+		marshmallowcustard: "Marshmallow custard.",
+		smoothsweettobacco: "Tobacco with a hint of vanilla cream.",
+		oldwolf: "Just like those little rootbeer barrel candies."
+	},
 	riverreserve: {
 		bandit: "Tobacco with blackberry custard.",
 		blackberrywafflecone: "Blackberry topping on a scoop of vanilla ice cream, all atop a vanilla waffle cone.",
@@ -121,6 +161,27 @@ let blurbs = {
 		guavapeach: " ",
 	},
 	jammonster: {
+		mangerineguavaice: "Mango, tangerine, guava, menthol.",
+		mangopeachguava: " ",
+		meloncolada: "Melon, pineapple, and coconut cream.",
+		meloncoladaice: "Melon, pineapple, coconut cream, and menthol.",
+		blueberryraspberrylemon: " ",
+		strawberrykiwipomegranate: " ",
+		strawmelonapple: "Strawberry, watermelon, and apple.",
+		strawmelonappleice: "Strawberry watermelon menthol.",
+		banana: "25% Toast, 25% Butter, 50% Banana.",
+		blueberry: "25% Toast, 25% Butter, 50% Blueberry Jam.",
+		strawberry: "25% Toast, 25% Butter, 50% Strawberry Jam.",
+		raspberry: "25% Toast, 25% Butter, 50% Raspberry Jam.",
+		grape: "25% Toast, 25% Butter, 50% Grape Jam.",
+		mixedberry: "25% Toast, 25% Butter, 50% Strawberry, Blueberry, and Raspberry Jam. How exciting.",
+		blackberry: "25% Toast, 25% Butter, 50% Blackberry Jam.",
+		pbjammonstergrape: "25% Toast, 25% Peanut Butter, 50% Grape Jam.",
+		pbjammonsterstrawberry: "25% Toast, 25% Peanut Butter, 50% Strawberry Jam.",
+		vanillacustard: "Plain vanilla custard.",
+		strawberrycustard: "Strawberries and classic vapetasia custard.",
+	},
+	fruitmonster: {
 		mangerineguavaice: "Mango, tangerine, guava, menthol.",
 		mangopeachguava: " ",
 		meloncolada: "Melon, pineapple, and coconut cream.",
@@ -293,6 +354,23 @@ let blurbs = {
 		peachymango: " ",
 		peachymangoiced: "With menthol.",
 	},
+	twist: {
+		bananaamber: "Oatmeal Cookie, Banana.",
+		berryamber: "Strawberry jam, honey, and graham cracker.",
+		strawberrymason: "Strawberry lemonade.",
+		honeydewmelonchew: "Watermelon and honeydew.",
+		honeydewmelonchew: "Watermelon and honeydew.",
+		icedpinkpunchlemonade: "Pink lemonade with menthol.",
+		icedpinkpunchlemonade: "Pink lemonade with menthol.",
+		pinkpunch: "Pink lemonade.",
+		pinkpunchlemonade: "Pink punch lemonade.",
+		purpleno1: "Tropical mixed berry lemonade.",
+		rainbowno1: "Sour skittles.",
+		spaceno1: "Strawberry and kiwi 'popping' candy.",
+		whiteno1: "Pineapple candy.",
+		watermelonmadness: "Watermelon and lemonade.",
+
+	},
 	lemontwist: {
 		bananaamber: "Oatmeal Cookie, Banana.",
 		berryamber: "Strawberry jam, honey, and graham cracker.",
@@ -447,6 +525,18 @@ let blurbs = {
 	ruzepremium:{
 
 	},
+	baddrip:{
+
+	},
+	innevape:{
+
+	},
+	bang:{
+
+	},
+	jewel:{
+
+	}
 
 };
 
