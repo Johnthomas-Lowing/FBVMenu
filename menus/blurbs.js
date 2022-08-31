@@ -1,4 +1,9 @@
 let blurbs = {
+	altzero: {
+		justblue: "blueberries and raspberries",
+		justred: "Strawberry, watermelon, cherry and fruit punch",
+		justyellow: "Sour lemon",
+	},
 	riverreserve: {
 		bandit: "Tobacco with blackberry custard.",
 		blackberrywafflecone: "Blackberry topping on a scoop of vanilla ice cream, all atop a vanilla waffle cone.",
@@ -37,19 +42,47 @@ let blurbs = {
 		caramelappledrifter: "Caramel apple custard.",
 		marshmallowcustard: "Marshmallow custard.",
 		smoothsweettobacco: "Tobacco with a hint of vanilla cream.",
-		oldwolf: "Just like those little rootbeer barrel candies."
+		oldwolf: "Just like those little rootbeer barrel candies.",
+		lemoncream: " ",
+		energydrink: " ",
+		peanutbutterbananagrahamcracker: " ",
+		strawberrybananacream: " ",
+		strawberrywatermelon: " ",
+		kiwistrawberrywatermelon: " ",
+		rootbeer: " ",
+	},
+	vaporlax: {
+		bananaice: " ",
+		peachice: " ",
+		blueberryice: " ",
+		lushice: " ",
+		coolmint: " ",
+		hawaiinmix: " ",
+		tropicalpunch: " ",
+
+	},
+	zephyr: {
+		grapefizz: "grape soda",
+		quench: "kiwi",
+		whitenoise: "white grape, apple, pear",
+		coolbluerazz: "blue razz lemonade",
 	},
 	naked: {
 		hawaiianpog: "Passion fruit, orange, and guava.",
 		lavaflow: "Strawberry, pineapple, and coconut.",
 		reallyberry: "Blue raspberry with a hint of lemon.",
-		polarbreeze: "Honeydew, pineapple, and cantaloupe menthol.",
-		brainfreeze: "Strawberry pomegranate menthol.",
-		verycool: "Blue raspberry menthol.",
+		melon: "Honeydew, pineapple, and cantaloupe menthol.",
+		strawberrypom: "Strawberry pomegranate menthol.",
+		berry: "Blue raspberry menthol.",
 		americanpatriot: "Bold tobacco with a hint of something sweet.",
 		cubanblend: "Plain and natural tobacco, middle of the road.",
 		eurogold: "Natural tobacco with vanilla custard.",
 		crispmenthol: "Just plain menthol.",
+		strawberrypom: " ",
+		mint: " ",
+		melon: " ",
+		berry: " ",
+		mango: " ",
 	},
 	kilo: {
 		watermelonsours: "Watermelon sour straws.",
@@ -62,11 +95,14 @@ let blurbs = {
 		blackberrylemonade: "Sweet and tart, blackberries and lemon.",
 		killerkustard: "Vanilla custard.",
 		strawberrykillerkustard: "Strawberry custard.",
-		killerkustardstrawberry: "Strawberry custard.",
+		killerkustardstrawberrypar: "Strawberry custard.",
 		blueberrykillerkustard: "Blueberry custard.",
 		lemonkillerkustard: "Lemon custard.",
 		royaltyiisalt: "Vanilla with mild tobacco.",
-		rainbowroad: "Mixed fruit cereal, like the little circles."	
+		rainbowroad: "Mixed fruit cereal, like the little circles.",	
+		pineappleexpress: "Bold, juicy pineapple with subtle hints of marshmallow cream.",
+		royaltyII: "rich custard, sweet hazelnuts, and creamy vanilla",
+		
 	},
 	choices: {
 		stackinchips: "Iced watermelon lemonade.",
@@ -109,6 +145,9 @@ let blurbs = {
 		dragon: "Lemon tart.",
 		phoenixtears: "Sugar cookie with vanilla custard.",
 		phoenix: "Guava lychee.",
+		sourgreenapple: "Sour Green Apple",
+		cucumberwatermelon: "Watermelon and Cucumber",
+		mangolime: "Mango and Lime",
 	},
 	juicehead: {
 		peachpear: " ",
@@ -119,10 +158,14 @@ let blurbs = {
 		blueberrylemonfreeze: "With menthol.",
 		strawberrykiwi: " ",
 		guavapeach: " ",
+		mangostrawberry: " ",
 	},
 	jammonster: {
 		mangerineguavaice: "Mango, tangerine, guava, menthol.",
 		mangopeachguava: " ",
+		strawberrykiwipomegranate: " ",
+		blueberryraspberrylemon: " ",
+		mixedberry: " ",
 		meloncolada: "Melon, pineapple, and coconut cream.",
 		meloncoladaice: "Melon, pineapple, coconut cream, and menthol.",
 		blueberryraspberrylemon: " ",
@@ -138,6 +181,7 @@ let blurbs = {
 		blackberry: "25% Toast, 25% Butter, 50% Blackberry Jam.",
 		pbjammonstergrape: "25% Toast, 25% Peanut Butter, 50% Grape Jam.",
 		pbjammonsterstrawberry: "25% Toast, 25% Peanut Butter, 50% Strawberry Jam.",
+		pbjammonsterbanana: "25% Toast, 25% Peanut Butter, 50% banana Jam.",
 		vanillacustard: "Plain vanilla custard.",
 		strawberrycustard: "Strawberries and classic vapetasia custard.",
 	},
@@ -264,6 +308,7 @@ let blurbs = {
 
 	},
 	skwezed: {
+		strawberry: " ",
 		grapefruit: " ",
 		greenapple: " ",
 		peach: " ",
@@ -271,12 +316,23 @@ let blurbs = {
 		mango: " ",
 		peach: " ",
 		watermelon: " ",
+		watermelonice: " ",
+		bananaice: " ",
+		grapefruitice: " ",
+		greenappleice: " ",
+		lycheeice: " ",
+		mangoice: " ",
 	},
-	thehypecollection: {
+	propaganda: {
 		america: "Red white and blue rocket pop.",
 		blueslushee: "Blue raspberry slushee.",
 		coolblueslushee: "Blue raspberry slushee, featuring menthol.",
 		cottoncandy: "Pink and blue, cotton candy.",
+		juicygrape: "grape",
+		cookiebutter: "oatmeal cookies sprinkled with brown sugar",
+		illuminati: "blood orange,strawberries and pineapple",
+		subliminal: "raspberry sour belts",
+		sourapple: " ",
 	},
 	usavapelab: {
 
@@ -356,6 +412,9 @@ let blurbs = {
 		buttercookie: "Sugar cookies with a hint of butter.",
 		keylimecookie: "Sugar cookies with key lime.",
 		shamrockcookie: "Delicious shamrock mint cookies.",
+		pumpkincookie: "Tasty pumpkin puree",
+		happyendblue: "Blue Cotton Candy",
+		happyendpink: "Pink Cotton Candy",
 	},
 	ripevapes: {
 
@@ -363,6 +422,14 @@ let blurbs = {
 	podjuice: {
 		jewelmint: "Just plain mint, little to no menthol.",
 		jewelmintsapphire: "Mint and menthol.",
+		jewelmintdiamond: " ",
+		jeweltobacco: " ",
+		cottonburst: " ",
+		jewelmango: " ",
+		aloegrape: " ",
+		pinkburst: " ",
+		jewelfuji: " ",
+		lushice: " ",
 	},
 	solace: {
 		bananadragonberry: "Dragonfruit and banana.",
@@ -381,15 +448,20 @@ let blurbs = {
 		strawberry: "Strawberry kiwi with menthol.",
 		tropicstrawberry: " ",
 	},
-	fivepawnsorchard: {
+	fivepawns: {
 		berrylimeade: "Raspberry, blueberry, blackberry, and a hint of lime.",
 		mangopassion: "Mango and passionfruit.",
 		melonmash: "Watermelon, honey melon, and cantaloupe.",
 		nanaberry: "Strawberry and banana.",
 		pineapplekiwi: "Pineapple and kiwi.",
-
-
-	},	
+		blackflagrisen: "Coffee, virginia tobacco, cream and walnut",
+		bowdensmate: "chocolate, mint and vanilla",
+		castlelong: "coconut, almonds, vanilla, brown sugar and bourbon",
+		gambit: "Granny Smith apple, vanilla ice cream",
+		grandmaster: "peanut butter, banana and caramel",
+		queenside: "Blood Orange, cream and vanilla",
+		symmetrysix: "strawberry, rhubarb, oat grains, Graham cracker and cream",
+	},
 	twistedtongue: {
 
 	},
@@ -403,9 +475,23 @@ let blurbs = {
 
 	},
 	baristabrewco:{
+		maplebardonut: "deep fried donut with irresistible maple glaze",
+		whitechocolatemocha: "espresso blended with milk and creamy white chocolate mocha sauce",
+		smoresmochabreeze: "honey-touched graham crackers, melted marshmallows, and drippy chocolate",
+		
 
 	},
 	crisp:{
+
+	},
+	mints:{
+		wintergreen: " ",
+		spearmint: " ",
+		peppermint: " ",
+		applemint: " ",
+		chocomint: " ",
+		lemonmint: " ",
+
 
 	},
 	element:{
@@ -424,6 +510,14 @@ let blurbs = {
 
 	},
 	yogi:{
+		applecinnamongranola: " ",
+		blueberrygranola: " ",
+		javagranola: " ",
+		granola: " ",
+		peanutbutterbananagranola: " ",
+		strawberrygranola: " ",
+		vanillatobaccogranola: " ",
+
 
 	},
 	californiagrown:{
@@ -447,6 +541,31 @@ let blurbs = {
 	ruzepremium:{
 
 	},
+	glasbasix:{
+		strawberryblast: "A classic take on strawberry sour belts with a gummy bear twist",
+		caribbeanpunch: "succulent peach, mouthwatering pineapple, sweet strawberry, refreshing apples and a hint of apricot",
+		fizzylemonade: "It's citrus-y, it's fizzy and it's icy cold menthol",
+		bluerazz: "Blue razz laffy taffy",
+		pbls: "Fruity pebbles and cream",
+		poundcake: "warm, sweet cake blends with bright notes of fresh lemon zest",
+		blueberrycake: "vanilla cake, sweet buttercream and fresh blueberries, drizzled in a sweet sugar glaze",
+		bananacreampie: "caramelized banana, pie crust, and vanilla custard",
+		sugarcookie: "buttery cookie dough, glazed with golden brown sugar caramel and finished with a cinnamon and nutmeg twist",
+		butterscotchreserve: "butterscotch and caramel components, blended with tabacco",
+		peachice: " ",
+		lushice: "watermelon, strawberry and mango",
+		guavaice: " ",
+		strawnanaice: "strawberry and bannana",
+	},
+	baddrip: {
+		freegodnectar: "passion fruit, orange, guava and mango",
+		badapple: "mixed apples",
+		dontcarebear: "gummy bear",
+		farleysgnarly: "kiwi, strawberries and bubblegum",
+	},
+	suicidebunny: {
+		derailed: "snickerdoodle cookie and banana",
+	}
 
 };
 

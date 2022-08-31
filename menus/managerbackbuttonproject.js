@@ -31,10 +31,6 @@ function checkPage(){
 		store = vancouver;
 	}
 };
-
-function backbutton (onclick="history.go(-1)")
-{button}
-
 function navbar() {
   if (nav.className === "navbar unselectable") {
     nav.className += " responsive";

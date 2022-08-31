@@ -119,6 +119,17 @@ hr {
   text-decoration: none;
   transition-duration: .2s;
 }
+.backbutton {
+  color: white;
+  display: inline-block;
+  background-color: #e74c3c;
+  padding: 1em 2em 1em 2em;
+  border-radius: 8px;
+  font-size: 18px;
+  text-shadow: 1px 1px 1px black;
+  text-decoration: none;
+  transition-duration: .2s;
+}
 
 .search {
   float: left;
